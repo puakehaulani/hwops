@@ -1,0 +1,14 @@
+.comingSoon {
+  height: 100vh;
+  width: 100vw;
+  padding: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .comingSoon {
+    padding: 0px;
+  }
+}
