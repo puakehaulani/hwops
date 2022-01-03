@@ -1,0 +1,10 @@
+.quotes {
+  padding-top: 75px;
+}
+
+/* mobile screens */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .quotes {
+    padding-bottom: 10px;
+  }
+}
