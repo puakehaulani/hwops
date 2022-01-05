@@ -10,7 +10,7 @@ function Portfolio() {
     const bannerObject =
     {
         header: "dev portfolio",
-        text: "show and tell",
+        text: "i like making things",
         image: "./images/about.jpg",
     }
     const portfolioObject = [

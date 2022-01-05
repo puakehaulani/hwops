@@ -30,14 +30,15 @@ function Team() {
                 <Image src="./images/founder.jpg" height={400} width={400} rounded fluid />
             </Col>
             <Col className="text-center my-auto textContainerFounder">
-                <h1 className="text-center">welina kakou</h1>
-                <p>I'm a full-stack web developer from O‘ahu, Hawai‘i, with a background in service and client relations. I earned a Certificate in Web Development from the University of Washington in 2021. My strengths include teamwork, listening, anticipating the needs of clients, and working in fast paced environments.
+                <h1 className="text-center">get to know me</h1>
+                <p>
+                    I earned a Certificate in Web Development from the University of Washington in 2021. After graduating I have worked with startups and as a freelancer to create client apps and learn new technologies in an effort to find my technical niche. My strengths include teamwork, listening, anticipating the needs of clients, and working in fast paced environments.
                     <br />
                     My motivation comes from my insatiable curiosity and the endorphin rush from solving a problem. I love to learn.
                     <br />
                     If I'm not coding, I'm probably outside - snowboarding, paddling outrigger canoes, or hanging out at a dog park .
                     <br />
-                    I'm excited to find my technical niche. In the meantime, I plan to continue trying new things and taking on diverse projects.
+                    I am currently based in Seattle but spend parts of the year as an aspiring digital nomad.
                 </p>
             </Col>
         </Row>

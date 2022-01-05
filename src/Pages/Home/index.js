@@ -4,14 +4,15 @@ import Skills from '../../Components/Skills'
 import Team from '../../Components/Team'
 import Footer from '../../Components/Footer'
 
+import gif from '../../assets/images/banner.gif'
 import './style.css'
 
 function Landing() {
     const bannerObject =
     {
         header: "aloha, i'm lexi",
-        text: "i like making stuff",
-        image: "./images/about.jpg",
+        text: "i'm a web developer",
+        image: gif,
     }
 
     return (
