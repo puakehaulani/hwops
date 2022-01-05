@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import Card from 'react-bootstrap/Card'
-import { Link } from 'react-router-dom'
 import { FaChevronDown } from 'react-icons/fa'
 
 import './style.css'
@@ -9,9 +8,9 @@ function CardComponent(props) {
     return (
         <Card style={{ borderStyle: "none", borderRadius: 0, backgroundColor: "transparent" }}>
             {props.gallery ?
-                <Link to={props.linkPath}>
+                <a href={props.linkPath}>
                     <Card.Img variant="top" src={props.image} style={{ borderRadius: 10 }} />
-                </Link>
+                </a>
                 : <Card.Img variant="top" src={props.image} style={{ borderRadius: 10 }} />}
             <Card.Body>
                 <Card.Title as="h3" className="text-center">{props.title}</Card.Title>
@@ -19,7 +18,7 @@ function CardComponent(props) {
                     {props.text}
                 </Card.Text>
                 {props.linkPath ?
-                    <div className="text-center"><Link to={props.linkPath}><FaChevronDown /></Link></div>
+                    <div className="text-center"><a href={props.linkPath}><FaChevronDown /></a></div>
                     : <></>}
             </Card.Body>
         </Card>
@@ -41,9 +40,9 @@ function CardListContent(props) {
     return (
         <Card style={{ borderStyle: "none", borderRadius: 0, backgroundColor: "transparent" }}>
             {props.linkPath ?
-                <Link to={props.linkPath}>
+                <a href={props.linkPath}>
                     <Card.Img variant="top" src={props.image} style={{ borderRadius: 10 }} />
-                </Link>
+                </a>
                 : <Card.Img variant="top" src={props.image} style={{ borderRadius: 10 }} />}
             <Card.Body>
                 <Card.Title as="h3" className="text-center">{props.title}</Card.Title>
@@ -53,7 +52,7 @@ function CardListContent(props) {
                     </ul>
                 </Card.Text>
                 {props.linkPath ?
-                    <div className="text-center"><Link to={props.linkPath}><FaChevronDown /></Link></div>
+                    <div className="text-center"><a href={props.linkPath}><FaChevronDown /></a></div>
                     : <></>}
             </Card.Body>
         </Card>

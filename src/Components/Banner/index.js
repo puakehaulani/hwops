@@ -16,6 +16,7 @@ function Banner(props) {
                 <Col className="my-auto textContainerBanner">
                     <Container>
                         <h1 >{props.data.header}</h1>
+                        <h4>{props.data.text}</h4>
                         <ContactCTA />
                     </Container>
 

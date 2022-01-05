@@ -11,6 +11,7 @@ function ServicesPage() {
     const bannerObject =
     {
         header: "i like creating solutions",
+        text: "problems don't scare me",
         image: "./images/about.jpg",
     }
 

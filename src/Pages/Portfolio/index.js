@@ -9,7 +9,8 @@ import './style.css'
 function Portfolio() {
     const bannerObject =
     {
-        header: "HEADER",
+        header: "dev portfolio",
+        text: "show and tell",
         image: "./images/about.jpg",
     }
     const portfolioObject = [

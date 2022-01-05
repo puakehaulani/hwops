@@ -34,7 +34,7 @@ function Contact() {
         <Container className="section-container" id="contact">
             <Row xs={1} sm={2} style={{ display: "flex", justifyContent: "center", alignItems: 'center' }}>
                 <Col sm={4} className="text-center">
-                    <h1 >lets chat</h1>
+                    <h1 >let's get started</h1>
                     <Container style={{ paddingBottom: "30px" }}>if you're interested in building something together, message me with your ideas or project. i'm currently taking packaged and custom projects.<br />
                         {ContactSocialIcons()}
                     </Container>
