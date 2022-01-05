@@ -1,3 +1,7 @@
 Link {
   color: black;
 }
+
+.caret:hover {
+  transform: rotate(-90deg) scale(2);
+}

@@ -8,7 +8,7 @@ function CardComponent(props) {
     return (
         <Card style={{ borderStyle: "none", borderRadius: 0, backgroundColor: "transparent" }}>
             {props.gallery ?
-                <a href={props.linkPath}>
+                <a href={props.linkPath} target="_blank" rel="noreferrer">
                     <Card.Img variant="top" src={props.image} style={{ borderRadius: 10 }} />
                 </a>
                 : <Card.Img variant="top" src={props.image} style={{ borderRadius: 10 }} />}
@@ -18,7 +18,7 @@ function CardComponent(props) {
                     {props.text}
                 </Card.Text>
                 {props.linkPath ?
-                    <div className="text-center"><a href={props.linkPath}><FaChevronDown /></a></div>
+                    <div className="text-center caret"><a href={props.linkPath} target="_blank" rel="noreferrer"><FaChevronDown /></a></div>
                     : <></>}
             </Card.Body>
         </Card>
@@ -35,12 +35,11 @@ function CardListContent(props) {
     // }, [])
 
     const arr = props.listItem.map(i => <li>{i}</li>)
-    console.log("arr", arr)
 
     return (
         <Card style={{ borderStyle: "none", borderRadius: 0, backgroundColor: "transparent" }}>
             {props.linkPath ?
-                <a href={props.linkPath}>
+                <a href={props.linkPath} target="_blank" rel="noreferrer">
                     <Card.Img variant="top" src={props.image} style={{ borderRadius: 10 }} />
                 </a>
                 : <Card.Img variant="top" src={props.image} style={{ borderRadius: 10 }} />}
@@ -52,7 +51,7 @@ function CardListContent(props) {
                     </ul>
                 </Card.Text>
                 {props.linkPath ?
-                    <div className="text-center"><a href={props.linkPath}><FaChevronDown /></a></div>
+                    <div className="text-center caret"><a href={props.linkPath} target="_blank" rel="noreferrer"><FaChevronDown /></a></div>
                     : <></>}
             </Card.Body>
         </Card>
