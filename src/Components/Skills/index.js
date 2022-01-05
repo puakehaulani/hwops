@@ -23,7 +23,7 @@ function Skills() {
         }
     ]
     return (
-        <Container className="skills" id="skills">
+        <Container className="section-container" id="skills">
             <h1 className="text-center">skillz to pay the billz</h1>
             <CardGridListItem data={skillsObject} />
         </Container>

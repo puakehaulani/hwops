@@ -16,3 +16,15 @@ h3 {
   align-items: center;
   filter: drop-shadow(5px 5px 15px #b5b5ad);
 }
+
+.section-container {
+  padding: 20px 0px;
+  margin-top: 20px;
+}
+
+/* mobile screens */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .section-container {
+    padding-bottom: 10px;
+  }
+}

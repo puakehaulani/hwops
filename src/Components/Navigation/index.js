@@ -24,10 +24,10 @@ function Navigation() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                 <Nav>
-                    <Nav.Link href="/">About</Nav.Link>
-                    <Nav.Link href="/services">Services</Nav.Link>
-                    <Nav.Link href="/portfolio">Portfolio</Nav.Link>
-                    <Nav.Link href="/contact">Contact</Nav.Link>
+                    <Nav.Link href="/">about</Nav.Link>
+                    <Nav.Link href="/services">services</Nav.Link>
+                    <Nav.Link href="/portfolio">portfolio</Nav.Link>
+                    <Nav.Link href="/contact">contact</Nav.Link>
 
                 </Nav>
             </Navbar.Collapse>

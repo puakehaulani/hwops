@@ -27,7 +27,7 @@ function Team() {
     const founderContent = (
         <Row xs={1} sm={2}>
             <Col className="image-container">
-                <Image src="./images/about.jpg" height={400} width={400} rounded fluid />
+                <Image src="./images/founder.jpg" height={400} width={400} rounded fluid />
             </Col>
             <Col className="text-center my-auto textContainerFounder">
                 <h1 className="text-center">welina kakou</h1>
@@ -55,7 +55,7 @@ function Team() {
     )
 
     return (
-        <Container className="team" id="team">
+        <Container className="section-container" id="team">
             {founderContent}
 
         </Container>

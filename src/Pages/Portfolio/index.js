@@ -14,51 +14,27 @@ function Portfolio() {
     }
     const portfolioObject = [
         {
-            title: "Portfolio 1",
+            title: "Noio Pathways",
             image: "./images/about.jpg",
-            text: "Umami you probably haven't heard of them health goth, aesthetic vegan beard palo santo bushwick."
+            text: "Consultant Website",
+            linkPath: "https://www.noiopathways.com",
+            gallery: true
         },
         {
-            title: "Portfolio 2",
+            title: "Darbe",
             image: "./images/about.jpg",
-            text: "I'm baby salvia waistcoat fashion axe small batch. Craft beer godard ugh hella slow-carb occupy chillwave coloring book flexitarian 90's farm-to-table photo booth."
+            text: "Social Media Startup",
+            linkPath: "https://www.darbe.com",
+            gallery: true
+
         },
-        {
-            title: "Portfolio 3",
-            image: "./images/about.jpg",
-            text: " Cliche occupy humblebrag, swag actually VHS vape normcore bespoke keffiyeh hammock trust fund paleo."
-        },
-        {
-            title: "Portfolio 4",
-            image: "./images/about.jpg",
-            text: "Umami you probably haven't heard of them health goth, aesthetic vegan beard palo santo bushwick."
-        },
-        {
-            title: "Portfolio 5",
-            image: "./images/about.jpg",
-            text: "I'm baby salvia waistcoat fashion axe small batch. Craft beer godard ugh hella slow-carb occupy chillwave coloring book flexitarian 90's farm-to-table photo booth."
-        },
-        {
-            title: "Portfolio 6",
-            image: "./images/about.jpg",
-            text: " Cliche occupy humblebrag, swag actually VHS vape normcore bespoke keffiyeh hammock trust fund paleo."
-        },
-        {
-            title: "Portfolio 7",
-            image: "./images/about.jpg",
-            text: "Umami you probably haven't heard of them health goth, aesthetic vegan beard palo santo bushwick."
-        },
-        {
-            title: "Portfolio 8",
-            image: "./images/about.jpg",
-            text: "I'm baby salvia waistcoat fashion axe small batch. Craft beer godard ugh hella slow-carb occupy chillwave coloring book flexitarian 90's farm-to-table photo booth."
-        }
+
     ]
     return (
         <div className="portfolioPage">
             <Navigation />
             <Banner data={bannerObject} />
-            <div className="portfolioFolders"><CardGrid data={portfolioObject} /></div>
+            <div className="portfolioFolders section-container"><CardGrid data={portfolioObject} /></div>
             <div className="text-center"><ContactCTA /></div>
             <Footer />
         </div>

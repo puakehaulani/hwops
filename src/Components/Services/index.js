@@ -28,7 +28,7 @@ function Services() {
         }
     ]
     return (
-        <Container className="services" id="services">
+        <Container className="section-container" id="services">
             <h1 className="text-center">what can we build together?</h1>
             <CardGridListItem data={servicesObject} />
         </Container>

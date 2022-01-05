@@ -9,6 +9,10 @@
   align-items: center;
 }
 
+.contactCTA {
+  padding: 10px 0px;
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .contact {
     padding-bottom: 10px;

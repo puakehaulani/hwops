@@ -10,9 +10,10 @@ import './style.css'
 function ServicesPage() {
     const bannerObject =
     {
-        header: "BannerHeader",
+        header: "i like creating solutions",
         image: "./images/about.jpg",
     }
+
 
     return (
         <div className="servicesPage">

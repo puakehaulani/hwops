@@ -24,8 +24,8 @@ function Quotes() {
         }
     ]
     return (
-        <Container className="quotes" id="quotes">
-            <h1 className="text-center">What People Are Saying</h1>
+        <Container className="section-container" id="quotes">
+            <h1 className="text-center">wahi a ka elepaio</h1>
             <CarouselComponent data={quoteObject} />
         </Container>
     )

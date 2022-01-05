@@ -11,9 +11,9 @@ import './style.css'
 
 function ContactCTA() {
     return (
-        <div>
-            Contact us today for a consultation<br />
-            <Link to="/contact"><Button>Contact</Button></Link>
+        <div className="contactCTA section-container">
+            let's get started <br />
+            <Link to="/contact"><Button>connect</Button></Link>
         </div>
 
     )
@@ -31,11 +31,11 @@ function ContactSocialIcons() {
 
 function Contact() {
     return (
-        <Container className="contact" id="contact">
+        <Container className="section-container" id="contact">
             <Row xs={1} sm={2} style={{ display: "flex", justifyContent: "center", alignItems: 'center' }}>
                 <Col sm={4} className="text-center">
-                    <h1 >Contact Us</h1>
-                    <Container style={{ paddingBottom: "30px" }}>Mollit enim fam af nulla hexagon narwhal pug bicycle rights deep v veniam.<br />
+                    <h1 >lets chat</h1>
+                    <Container style={{ paddingBottom: "30px" }}>if you're interested in building something together, message me with your ideas or project. i'm currently taking packaged and custom projects.<br />
                         {ContactSocialIcons()}
                     </Container>
                 </Col>

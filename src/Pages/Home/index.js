@@ -9,7 +9,7 @@ import './style.css'
 function Landing() {
     const bannerObject =
     {
-        header: "BannerHeader",
+        header: "hey i'm lexi. i like making stuff.",
         image: "./images/about.jpg",
     }
 
