@@ -1,4 +1,6 @@
 .notFound {
+  background-color: #e9dbd7;
+  font-family: "Spartan", san-serif;
   padding-top: 25%;
   height: 100vh;
   width: 100vw;

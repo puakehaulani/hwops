@@ -11,8 +11,9 @@ function Landing() {
     const bannerObject =
     {
         header: "aloha, i'm lexi",
-        text: "i'm a web developer",
+        text: "i'm a full stack web developer",
         image: gif,
+        cta: true
     }
 
     return (

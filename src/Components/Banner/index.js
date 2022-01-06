@@ -17,7 +17,7 @@ function Banner(props) {
                     <Container>
                         <h1 >{props.data.header}</h1>
                         <h4>{props.data.text}</h4>
-                        <ContactCTA />
+                        {props.data.cta ? <ContactCTA /> : <></>}
                     </Container>
 
                 </Col>

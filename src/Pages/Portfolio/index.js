@@ -12,6 +12,7 @@ function Portfolio() {
         header: "dev portfolio",
         text: "i like making things",
         image: "./images/about.jpg",
+        cta: true
     }
     const portfolioObject = [
         {

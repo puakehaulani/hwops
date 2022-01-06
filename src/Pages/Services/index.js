@@ -13,6 +13,7 @@ function ServicesPage() {
         header: "i like creating solutions",
         text: "problems don't scare me",
         image: "./images/about.jpg",
+        cta: true
     }
 
 
