@@ -2,8 +2,9 @@ import Carousel from 'react-bootstrap/Carousel'
 import './style.css'
 
 function CarouselComponent(props) {
+    console.log("Carousel props ", props)
     const carouselItems = props.data.map(i => (
-        <Carousel.Item key={i.title}>
+        < Carousel.Item key={i.title} >
             <img
                 className="d-block w-100 carouselImg"
                 src={i.image}
@@ -13,11 +14,11 @@ function CarouselComponent(props) {
             />
             <Carousel.Caption>
                 <h3>{i.title}</h3>
-                <p>{i.text}.</p>
-                <q>{i.quote}</q>
+                {i.text ? <p>{i.text}.</p> : <></>}
+                {i.quote ? <q>{i.quote}</q> : <></>}
                 <a href={i.linkPath}><h5>{i.author}</h5></a>
             </Carousel.Caption>
-        </Carousel.Item>
+        </Carousel.Item >
     )
     )
 

@@ -1,5 +1,5 @@
 import Navigation from '../../Components/Navigation'
-import Banner from '../../Components/Banner'
+import { BannerCarousel } from '../../Components/Banner'
 import CardGrid from '../../Components/CardGrid'
 import { ContactCTA } from '../../Components/Contact'
 import Footer from '../../Components/Footer'
@@ -11,7 +11,24 @@ function Portfolio() {
     {
         header: "HEADER",
         text: "text text text",
-        image: "./images/about.jpg",
+        carousel: [
+            {
+                title: "title1",
+                image: "./images/about.jpg"
+            },
+            {
+                title: "title2",
+                image: "./images/about.jpg"
+            },
+            {
+                title: "title3",
+                image: "./images/about.jpg"
+            },
+            {
+                title: "title4",
+                image: "./images/about.jpg"
+            },
+        ],
         cta: true
     }
     const portfolioObject = [
@@ -55,7 +72,7 @@ function Portfolio() {
     return (
         <div className="portfolioPage">
             <Navigation />
-            <Banner data={bannerObject} />
+            <BannerCarousel data={bannerObject} />
             <div className="portfolioFolders section-container"><CardGrid data={portfolioObject} /></div>
             <div className="text-center"><ContactCTA /></div>
             <Footer />
