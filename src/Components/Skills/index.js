@@ -8,23 +8,25 @@ import './style.css'
 function Skills() {
     const skillsObject = [
         {
-            title: "basics",
-            listItem: ["JavaScript", "Express", "Node", "MySQL", "MongoDB", "Git"]
+            title: "Skill 1",
+            listItem: ["beep", "boop", "boop", "bop"],
+            image: "./images/about.jpg"
 
         },
         {
-            title: "frameworks",
-            listItem: ["React", "React Native"]
-
+            title: "Skill 2",
+            listItem: ["beep", "boop", "bop"],
+            image: "./images/about.jpg"
         },
         {
-            title: "services and tools",
-            listItem: ["AWS", "Firebase", "googling"]
+            title: "Skill 3",
+            listItem: ["boop", "boop", "boop", "beep", "bop"],
+            image: "./images/about.jpg"
         }
     ]
     return (
         <Container className="section-container" id="skills">
-            <h1 className="text-center">skillz to pay the billz</h1>
+            <h1 className="text-center">Our Skills</h1>
             <CardGridListItem data={skillsObject} />
         </Container>
     )

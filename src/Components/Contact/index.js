@@ -12,8 +12,8 @@ import './style.css'
 function ContactCTA() {
     return (
         <div className="contactCTA section-container">
-            let's get started <br />
-            <Link to="/contact"><Button>connect</Button></Link>
+            Contact us for a consultation! <br />
+            <Link to="/contact"><Button>Connect</Button></Link>
         </div>
 
     )
@@ -23,9 +23,10 @@ function ContactSocialIcons() {
     return (
         <>
             {/* TODO: update hrefs with clients urls */}
-            <h1 ><a style={{ color: "#0e404b" }} href="https://www.linkedin.com/in/lexijack/" target="_blank" rel='noreferrer'><FaLinkedin /></a>
+            <h1 >
+                <a style={{ color: "#0e404b" }} href="https://www.linkedin.com/in/lexijack/" target="_blank" rel='noreferrer'><FaLinkedin /></a>
                 <a style={{ color: "#0e404b" }} href="https://www.instagram.com/puakehaulani/" target="_blank" rel='noreferrer'><FaInstagramSquare /></a>
-                <a style={{ color: "#0e404b" }} href="https://github.com/puakehaulani" target="_blank" rel='noreferrer'><FaGithubSquare /></a></h1>
+            </h1>
         </>
     )
 }
@@ -35,8 +36,9 @@ function Contact() {
         <Container className="section-container" id="contact">
             <Row xs={1} sm={2} style={{ display: "flex", justifyContent: "center", alignItems: 'center' }}>
                 <Col sm={4} className="text-center">
-                    <h1 >let's get started</h1>
-                    <Container style={{ paddingBottom: "30px" }}>if you're interested in building something together, message me with your ideas or project. i'm currently taking packaged and custom projects.<br />
+                    <h1 >Contact Us</h1>
+                    <Container style={{ paddingBottom: "30px" }}>
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br />
                         {ContactSocialIcons()}
                     </Container>
                 </Col>

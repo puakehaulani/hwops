@@ -9,26 +9,46 @@ import './style.css'
 function Portfolio() {
     const bannerObject =
     {
-        header: "dev portfolio",
-        text: "i like making things",
+        header: "HEADER",
+        text: "text text text",
         image: "./images/about.jpg",
         cta: true
     }
     const portfolioObject = [
         {
-            title: "Noio Pathways",
+            title: "Title 1",
             image: "./images/about.jpg",
-            text: "Consultant Website",
-            linkPath: "https://www.noiopathways.com",
+            text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            linkPath: "https://www.google.com",
             gallery: true
         },
         {
-            title: "Darbe",
+            title: "Title 2",
             image: "./images/about.jpg",
-            text: "Social Media Startup",
-            linkPath: "https://www.darbe.com",
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+            linkPath: "https://www.google.com",
             gallery: true
-
+        },
+        {
+            title: "Title 3",
+            image: "./images/about.jpg",
+            text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+            linkPath: "https://www.google.com",
+            gallery: true
+        },
+        {
+            title: "Title 4",
+            image: "./images/about.jpg",
+            text: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+            linkPath: "https://www.google.com",
+            gallery: true
+        },
+        {
+            title: "Title 5",
+            image: "./images/about.jpg",
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+            linkPath: "https://www.google.com",
+            gallery: true
         },
 
     ]

@@ -10,7 +10,7 @@ function Footer() {
             <hr className="separator"></hr>
             <ContactSocialIcons />
             made with <FaHeart /> by <a className="devLink" href="https://www.linkedin.com/in/lexijack/" target="_blank" rel="noopener noreferrer">lexi jack</a><br />
-            {/* <FaRegCopyright /> 2022 */}
+            <FaRegCopyright /> 2022
         </div>
     )
 }

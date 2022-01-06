@@ -26,13 +26,6 @@ function CardComponent(props) {
 }
 
 function CardListContent(props) {
-    console.log("props", props.listItem)
-    // useEffect(() => {
-    //     if (props.listItem) {
-    //         console.log(props.listItem.map(i => <li>i</li>))
-    //     }
-
-    // }, [])
 
     const arr = props.listItem.map(i => <li>{i}</li>)
 

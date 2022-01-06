@@ -8,8 +8,8 @@ import './style.css'
 function ContactPage() {
 
     const bannerObject = {
-        header: "have your people call my people",
-        text: "",
+        header: "HEADER",
+        text: "text text text",
         image: "./images/about.jpg",
         cta: false
     }

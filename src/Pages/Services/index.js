@@ -10,8 +10,8 @@ import './style.css'
 function ServicesPage() {
     const bannerObject =
     {
-        header: "i like creating solutions",
-        text: "problems don't scare me",
+        header: "HEADER",
+        text: "text text text",
         image: "./images/about.jpg",
         cta: true
     }

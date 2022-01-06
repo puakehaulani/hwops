@@ -27,18 +27,12 @@ function Team() {
     const founderContent = (
         <Row xs={1} sm={2}>
             <Col className="image-container">
-                <Image src="./images/founder.jpg" height={400} width={400} rounded fluid />
+                <Image src="./images/about.jpg" height={400} width={400} rounded fluid />
             </Col>
             <Col className="text-center my-auto textContainerFounder">
-                <h1 className="text-center">get to know me</h1>
+                <h1 className="text-center">About Our Founder</h1>
                 <p>
-                    I earned a Certificate in Web Development from the University of Washington in 2021. After graduating I have worked with startups and as a freelancer to create client apps and learn new technologies in an effort to find my technical niche. My strengths include teamwork, listening, anticipating the needs of clients, and working in fast paced environments.
-                    <br />
-                    My motivation comes from my insatiable curiosity and the endorphin rush from solving a problem. I love to learn.
-                    <br />
-                    If I'm not coding, I'm probably outside - snowboarding, paddling outrigger canoes, or hanging out at a dog park .
-                    <br />
-                    I am currently based in Seattle but spend parts of the year as an aspiring digital nomad.
+                    Ugh williamsburg unicorn keytar labore meggings fam hashtag ut velit. Tbh dolore live-edge, selfies YOLO shoreditch eu subway tile est kombucha. Cronut readymade irony blog. Dolore mlkshk schlitz pok pok gluten-free skateboard hella lumbersexual heirloom, cupidatat gastropub dolore disrupt adipisicing. Vape pug vegan neutra ullamco officia pariatur polaroid semiotics keytar vice affogato knausgaard. Art party laborum offal in ut dolore mlkshk literally pour-over chambray pariatur. Keffiyeh heirloom locavore, aliqua dreamcatcher in pitchfork blog hashtag umami.
                 </p>
             </Col>
         </Row>
@@ -57,6 +51,7 @@ function Team() {
 
     return (
         <Container className="section-container" id="team">
+            {teamContent}
             {founderContent}
 
         </Container>

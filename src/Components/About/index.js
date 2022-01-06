@@ -8,7 +8,7 @@ import './style.css'
 
 function About() {
     return (
-        <Container className="about" id="about">
+        <Container className="section-container" id="about">
             <Row xs={1} sm={2}>
                 <Col className="image-container">
                     <Image src="./images/about.jpg" height={400} width={400} rounded fluid />
