@@ -9,25 +9,24 @@ import './style.css'
 function Portfolio() {
     const bannerObject =
     {
-        header: "HEADER",
-        text: "text text text",
+        header: "HEADER FOR PORTFOLIO",
+        text: "Subheader for Portfolio",
         carousel: [
             {
-                title: "title1",
+                title: "title 1",
+                text: "text optional here",
                 image: "./images/about.jpg"
             },
             {
-                title: "title2",
+                title: "title 2",
+                text: "text optional here",
                 image: "./images/about.jpg"
             },
             {
-                title: "title3",
+                title: "title 3",
+                text: "text optional here",
                 image: "./images/about.jpg"
-            },
-            {
-                title: "title4",
-                image: "./images/about.jpg"
-            },
+            }
         ],
         cta: true
     }
@@ -70,11 +69,15 @@ function Portfolio() {
 
     ]
     return (
-        <div className="portfolioPage">
+        <div className="pageView">
             <Navigation />
             <BannerCarousel data={bannerObject} />
-            <div className="portfolioFolders section-container"><CardGrid data={portfolioObject} /></div>
-            <div className="text-center"><ContactCTA /></div>
+            <div className="portfolioFolders section-container">
+                <CardGrid data={portfolioObject} />
+            </div>
+            <div className="text-center">
+                <ContactCTA />
+            </div>
             <Footer />
         </div>
     )

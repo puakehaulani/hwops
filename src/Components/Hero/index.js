@@ -15,7 +15,7 @@ function Hero() {
                     </div>
                 </Row>
                 <Row>
-                    <div className="tagline">Tagline</div>
+                    <div className="tagline">This is the Hero Image and Tagline</div>
                 </Row>
             </Container>
         </div>

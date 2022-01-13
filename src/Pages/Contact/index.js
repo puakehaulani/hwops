@@ -8,16 +8,18 @@ import './style.css'
 function ContactPage() {
 
     const bannerObject = {
-        header: "HEADER",
-        text: "text text text",
+        header: "HEADER FOR CONTACT",
+        text: "Subheader for Contact",
         image: "./images/about.jpg",
         cta: false
     }
     return (
-        <div className="contactPage">
+        <div className="pageView">
             <Navigation />
             <Banner data={bannerObject} />
-            <div className="contentSection"><Contact /></div>
+            <div className="contentSection">
+                <Contact />
+            </div>
             <Footer />
         </div>
     )

@@ -1,6 +1,8 @@
 import Navigation from '../../Components/Navigation'
-import Banner from '../../Components/Banner'
-import Skills from '../../Components/Skills'
+import Hero from '../../Components/Hero'
+import { ContactCTA } from '../../Components/Contact'
+import About from '../../Components/About'
+import Services from '../../Components/Services'
 import Team from '../../Components/Team'
 import Footer from '../../Components/Footer'
 
@@ -9,18 +11,22 @@ import './style.css'
 function Landing() {
     const bannerObject =
     {
-        header: "HEADER",
-        text: "text text text text",
+        header: "HEADER FOR HOME",
+        text: "Subheader for home page",
         image: "./images/about.jpg",
         cta: true
     }
 
     return (
-        <div className="landingPage">
+        <div className="pageView">
             <Navigation />
-            <Banner data={bannerObject} />
-            <Skills />
+            <Hero />
+            <div className="text-center"><ContactCTA /></div>
+            <About />
+            <Services />
+            <div className="text-center"><ContactCTA /></div>
             <Team />
+            <div className="text-center"><ContactCTA /></div>
             <Footer />
         </div>
     )

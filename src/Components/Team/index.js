@@ -51,9 +51,8 @@ function Team() {
 
     return (
         <Container className="section-container" id="team">
-            {teamContent}
             {founderContent}
-
+            {teamContent}
         </Container>
     )
 }
