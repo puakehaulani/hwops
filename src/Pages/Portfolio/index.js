@@ -2,6 +2,7 @@ import Navigation from '../../Components/Navigation'
 import { BannerCarousel } from '../../Components/Banner'
 import CardGrid from '../../Components/CardGrid'
 import { ContactCTA } from '../../Components/Contact'
+import Quotes from '../../Components/Quotes'
 import Footer from '../../Components/Footer'
 
 import './style.css'
@@ -78,6 +79,7 @@ function Portfolio() {
             <div className="text-center">
                 <ContactCTA />
             </div>
+            <Quotes />
             <Footer />
         </div>
     )
