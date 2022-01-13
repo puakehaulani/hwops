@@ -11,7 +11,7 @@ Created by Lexi Scales
 2. Update remote to point to new Github repo, or it will push changes to clone origin  
 > `git remote set-url origin <NEW-GIT-REMOTE>`
 3. Verify remote updated  
-`git remote -v`
+> `git remote -v`
 4. Push initial commit to main
 5. Create dev branch  
 > `git checkout -b dev`
