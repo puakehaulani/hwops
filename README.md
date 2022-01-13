@@ -1,4 +1,4 @@
-Company Website made by Lexi Jack
+Company Website made by Lexi Scales
 
 # System requirements
 aws cli
@@ -36,10 +36,10 @@ export class AmplifyInfraStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const amplifyApp = new amplify.App(this, 'MyApp', {
+    const amplifyApp = new amplify.App(this, <NAME-OF-APP>, {
       sourceCodeProvider: new amplify.GitHubSourceCodeProvider({
-        owner: 'puakehaulani',
-        repository: 'lexidev',
+        owner: <GITHUB-USERNAME>,
+        repository: <GITHUB-REPO-NAME>,
         oauthToken: cdk.SecretValue.secretsManager('my-github-token'),
       })
     });
@@ -47,9 +47,9 @@ export class AmplifyInfraStack extends cdk.Stack {
     const mainBranch = amplifyApp.addBranch("main");
     const devBranch = amplifyApp.addBranch("dev", {
       basicAuth: amplify.BasicAuth.fromCredentials('admin', cdk.SecretValue.secretsManager('my-github-token'))
-    });
+    }); // this auth allows you to sign in with token to see dev branch live
 
-    const domain = amplifyApp.addDomain('lexi.scalesdev.com', {
+    const domain = amplifyApp.addDomain(<'domainName.com'>, {
       enableAutoSubdomain: true, // in case subdomains should be auto registered for branches
       autoSubdomainCreationPatterns: ['*', 'pr*'], // regex for branches that should auto register subdomains
     });
