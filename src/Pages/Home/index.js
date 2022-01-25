@@ -20,7 +20,6 @@ function Landing() {
         <div className="pageView">
             <Navigation />
             <Hero data={heroObject} />
-            <div className="text-center"><ContactCTA /></div>
             <About />
             <Services />
             <div className="text-center"><ContactCTA /></div>
