@@ -15,7 +15,12 @@ Created by Lexi Scales
 4. Push initial commit to main
 5. Create dev branch  
 > `git checkout -b dev`
-6. In Github, be sure protect main branch to only accept commits via PR
+6. In Github, be sure protect main branch to only accept commits via PR  
+7. Run `npm i` to install all dependencies
+8. Run `npm run start` to start development server and see changes on localhost:3000
+
+## Customization  
+- Be sure to global search TODO: and make all updates for client specific info
 ## Github Token Setup
 1. Create PERSONAL ACCESS TOKEN in Github account with following scopes:
   - repo (all)
