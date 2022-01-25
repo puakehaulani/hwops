@@ -1,3 +1,5 @@
+/* Color Story */
+
 .pageView {
   background-color: #e9dbd7;
   font-family: "Spartan", san-serif;
@@ -34,5 +36,11 @@ a:hover {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .section-container {
     padding-bottom: 10px;
+  }
+  a {
+    transition: unset;
+  }
+  a:hover {
+    transform: unset;
   }
 }
