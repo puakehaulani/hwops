@@ -1,9 +1,8 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Image from 'react-bootstrap/Image'
 import CardGrid from '../CardGrid'
+import { TwoColTextRight } from '../TwoCol'
 import './style.css'
 
 function Team() {
@@ -24,18 +23,14 @@ function Team() {
             text: " Cliche occupy humblebrag, swag actually VHS vape normcore bespoke keffiyeh hammock trust fund paleo."
         }
     ]
+
+    const founderObject = {
+        image: "./images/about.jpg",
+        title: "About Our Founder",
+        text: "Ugh williamsburg unicorn keytar labore meggings fam hashtag ut velit. Tbh dolore live-edge, selfies YOLO shoreditch eu subway tile est kombucha. Cronut readymade irony blog. Dolore mlkshk schlitz pok pok gluten-free skateboard hella lumbersexual heirloom, cupidatat gastropub dolore disrupt adipisicing. Vape pug vegan neutra ullamco officia pariatur polaroid semiotics keytar vice affogato knausgaard. Art party laborum offal in ut dolore mlkshk literally pour-over chambray pariatur. Keffiyeh heirloom locavore, aliqua dreamcatcher in pitchfork blog hashtag umami."
+    }
     const founderContent = (
-        <Row xs={1} sm={2}>
-            <Col className="image-container">
-                <Image src="./images/about.jpg" height={400} width={400} rounded fluid />
-            </Col>
-            <Col className="text-center my-auto textContainerFounder">
-                <h1 className="text-center">About Our Founder</h1>
-                <p>
-                    Ugh williamsburg unicorn keytar labore meggings fam hashtag ut velit. Tbh dolore live-edge, selfies YOLO shoreditch eu subway tile est kombucha. Cronut readymade irony blog. Dolore mlkshk schlitz pok pok gluten-free skateboard hella lumbersexual heirloom, cupidatat gastropub dolore disrupt adipisicing. Vape pug vegan neutra ullamco officia pariatur polaroid semiotics keytar vice affogato knausgaard. Art party laborum offal in ut dolore mlkshk literally pour-over chambray pariatur. Keffiyeh heirloom locavore, aliqua dreamcatcher in pitchfork blog hashtag umami.
-                </p>
-            </Col>
-        </Row>
+        <TwoColTextRight data={founderObject} />
     )
 
     const teamContent = (
