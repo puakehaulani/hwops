@@ -22,10 +22,13 @@ function ContactCTA() {
 function ContactSocialIcons() {
     return (
         <>
-            {/* TODO: update hrefs with clients urls */}
+            {/* 
+                TODO: update hrefs with clients urls
+                TODO: update color on icons
+            */}
             <h1 >
-                <a style={{ color: "#0e404b" }} href="https://www.linkedin.com/in/lexijack/" target="_blank" rel='noreferrer'><FaLinkedin /></a>
-                <a style={{ color: "#0e404b" }} href="https://www.instagram.com/puakehaulani/" target="_blank" rel='noreferrer'><FaInstagramSquare /></a>
+                <a style={{ color: "#B2A2B9" }} href="https://www.linkedin.com/in/lexijack/" target="_blank" rel='noreferrer'><FaLinkedin /></a>
+                <a style={{ color: "#B2A2B9" }} href="https://www.instagram.com/puakehaulani/" target="_blank" rel='noreferrer'><FaInstagramSquare /></a>
             </h1>
         </>
     )

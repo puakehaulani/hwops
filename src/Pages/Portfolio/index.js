@@ -1,10 +1,11 @@
+import Container from 'react-bootstrap/Container'
+
 import Navigation from '../../Components/Navigation'
 import { BannerCarousel } from '../../Components/Banner'
 import CardGrid from '../../Components/CardGrid'
 import { ContactCTA } from '../../Components/Contact'
 import Quotes from '../../Components/Quotes'
 import Footer from '../../Components/Footer'
-
 import './style.css'
 
 function Portfolio() {
@@ -72,14 +73,16 @@ function Portfolio() {
     return (
         <div className="pageView">
             <Navigation />
-            <BannerCarousel data={bannerObject} />
-            <div className="portfolioFolders section-container">
-                <CardGrid data={portfolioObject} />
-            </div>
-            <div className="text-center">
-                <ContactCTA />
-            </div>
-            <Quotes />
+            <Container className="pageContent">
+                <BannerCarousel data={bannerObject} />
+                <div className="portfolioFolders section-container">
+                    <CardGrid data={portfolioObject} />
+                </div>
+                <div className="text-center">
+                    <ContactCTA />
+                </div>
+                <Quotes />
+            </Container>
             <Footer />
         </div>
     )

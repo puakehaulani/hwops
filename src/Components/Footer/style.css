@@ -7,17 +7,13 @@
 }
 
 .footer a {
-  color: #bcafb4;
+  color: #bd9a75;
   text-decoration: none;
 }
 
 .footer a:hover {
-  color: pink;
+  color: #b2a2b9;
   text-decoration: underline;
-}
-
-.separator {
-  border-top: 1px dashed #bcafb4;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
