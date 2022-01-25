@@ -9,18 +9,17 @@ import Footer from '../../Components/Footer'
 import './style.css'
 
 function Landing() {
-    const bannerObject =
+    const heroObject =
     {
-        header: "HEADER FOR HOME",
-        text: "Subheader for home page",
-        image: "./images/about.jpg",
+        image: "./images/logo.png",
+        tagline: "This is the Hero Tagline",
         cta: true
     }
 
     return (
         <div className="pageView">
             <Navigation />
-            <Hero />
+            <Hero data={heroObject} />
             <div className="text-center"><ContactCTA /></div>
             <About />
             <Services />
