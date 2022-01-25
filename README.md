@@ -1,5 +1,5 @@
 # Company Website Template  
-Created by Lexi Scales  
+Created with React and &hearts; by Lexi Scales  
 # Getting Started
 ## System requirements
 > `aws cli`  
