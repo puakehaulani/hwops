@@ -3,20 +3,27 @@ import Image from 'react-bootstrap/Image'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
+import { ContactCTA } from '../Contact'
 import './style.css'
 
-function Hero() {
+function Hero(props) {
+
     return (
-        <div className="hero" id="home">
+        <div className="hero">
             <Container>
                 <Row >
                     <div className="logoOverlay">
-                        <Image src="./images/logo.png" />
+                        <Image src={props.data.image} />
                     </div>
                 </Row>
                 <Row>
-                    <div className="tagline">This is the Hero Image and Tagline</div>
+                    <div className="tagline">{props.data.tagline}</div>
                 </Row>
+                {
+                    props.data.cta ?
+                        <ContactCTA />
+                        : <></>
+                }
             </Container>
         </div>
     )
