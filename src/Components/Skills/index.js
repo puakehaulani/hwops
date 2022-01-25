@@ -25,10 +25,13 @@ function Skills() {
         }
     ]
     return (
-        <Container className="section-container" id="skills">
-            <h1 className="text-center">Our Skills</h1>
-            <CardGridListItem data={skillsObject} />
-        </Container>
+        <>
+            <span class="anchor" id="skills" />
+            <Container className="section-container">
+                <h1 className="text-center">Our Skills</h1>
+                <CardGridListItem data={skillsObject} />
+            </Container>
+        </>
     )
 }
 

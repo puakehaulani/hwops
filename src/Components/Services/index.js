@@ -25,10 +25,12 @@ function Services() {
         }
     ]
     return (
-        <Container className="section-container" id="services">
-            <h1 className="text-center">Our Services</h1>
-            <CardGrid data={servicesObject} />
-        </Container>
+        <>
+            <span class="anchor" id="services" />
+            <Container className="section-container">
+                <h1 className="text-center">Our Services</h1>
+                <CardGrid data={servicesObject} />
+            </Container></>
     )
 }
 

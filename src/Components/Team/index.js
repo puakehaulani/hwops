@@ -45,10 +45,13 @@ function Team() {
     )
 
     return (
-        <Container className="section-container" id="team">
-            {founderContent}
-            {teamContent}
-        </Container>
+        <>
+            <span class="anchor" id="team" />
+            <Container className="section-container">
+                {founderContent}
+                {teamContent}
+            </Container>
+        </>
     )
 }
 

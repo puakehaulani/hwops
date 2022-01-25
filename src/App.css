@@ -1,5 +1,13 @@
 /* Color Story */
 
+span.anchor {
+  margin-top: -76px; /* height of nav */
+  display: block;
+  height: 76px; /* height of nav */
+  visibility: hidden;
+  position: relative;
+}
+
 .pageView {
   background-color: #e9dbd7;
   font-family: "Nunito", san-serif;

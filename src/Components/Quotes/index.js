@@ -24,12 +24,15 @@ function Quotes() {
         }
     ]
     return (
-        <Container className="section-container" id="quotes">
-            <div className="text-center">
-                <h1>What People Are Saying</h1>
-            </div>
-            <CarouselComponent data={quoteObject} />
-        </Container>
+        <>
+            <span className="anchor" id="quotes" />
+            <Container className="section-container">
+                <div className="text-center">
+                    <h1>What People Are Saying</h1>
+                </div>
+                <CarouselComponent data={quoteObject} />
+            </Container>
+        </>
     )
 }
 

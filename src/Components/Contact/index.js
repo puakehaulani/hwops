@@ -11,9 +11,11 @@ import './style.css'
 
 function ContactCTA() {
     return (
-        <div className="contactCTA section-container">
+        <div className="contactCTA">
             Contact us for a consultation! <br />
-            <Link to="/contact"><Button>Connect</Button></Link>
+            <Link to="/contact">
+                <Button>Connect</Button>
+            </Link>
         </div>
 
     )
@@ -36,20 +38,23 @@ function ContactSocialIcons() {
 
 function Contact() {
     return (
-        <Container className="section-container" id="contact">
-            <Row xs={1} sm={2} style={{ display: "flex", justifyContent: "center", alignItems: 'center' }}>
-                <Col sm={4} className="text-center">
-                    <h1 >Contact Us</h1>
-                    <Container style={{ paddingBottom: "30px" }}>
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br />
-                        {ContactSocialIcons()}
-                    </Container>
-                </Col>
-                <Col sm={8} className="formCol">
-                    <FormSubmitAPIForm />
-                </Col>
-            </Row>
-        </Container>
+        <>
+            <span class="anchor" id="contact" />
+            <Container className="section-container">
+                <Row xs={1} sm={2} style={{ display: "flex", justifyContent: "center", alignItems: 'center' }}>
+                    <Col sm={4} className="text-center">
+                        <h1 >Contact Us</h1>
+                        <Container style={{ paddingBottom: "30px" }}>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br />
+                            {ContactSocialIcons()}
+                        </Container>
+                    </Col>
+                    <Col sm={8} className="formCol">
+                        <FormSubmitAPIForm />
+                    </Col>
+                </Row>
+            </Container>
+        </>
     )
 }
 

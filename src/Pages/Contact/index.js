@@ -17,9 +17,7 @@ function ContactPage() {
         <div className="pageView">
             <Navigation />
             <Banner data={bannerObject} />
-            <div className="contentSection">
-                <Contact />
-            </div>
+            <Contact />
             <Footer />
         </div>
     )

@@ -15,9 +15,12 @@ const aboutObject = {
 
 function About() {
     return (
-        <Container className="section-container" id="about">
-            <TwoColTextRight data={aboutObject} />
-        </Container>
+        <>
+            <span class="anchor" id="about" />
+            <Container className="section-container">
+                <TwoColTextRight data={aboutObject} />
+            </Container>
+        </>
     )
 }
 
