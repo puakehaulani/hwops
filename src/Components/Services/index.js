@@ -6,6 +6,7 @@ import CardGrid from '../CardGrid'
 import './style.css'
 
 function Services() {
+    // TODO: Customize Client Object
     const servicesObject = [
         {
             title: "Service 1",
@@ -28,6 +29,7 @@ function Services() {
         <>
             <span class="anchor" id="services" />
             <Container className="section-container">
+                {/* TODO: Customize Client Content */}
                 <h1 className="text-center">Our Services</h1>
                 <CardGrid data={servicesObject} />
             </Container></>

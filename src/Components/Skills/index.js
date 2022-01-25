@@ -2,10 +2,11 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 
 import { CardGridListItem } from '../CardGrid'
-
 import './style.css'
 
 function Skills() {
+    // TODO: Customize Client Object
+
     const skillsObject = [
         {
             title: "Skill 1",
@@ -28,6 +29,7 @@ function Skills() {
         <>
             <span class="anchor" id="skills" />
             <Container className="section-container">
+                {/* TODO: Customize Client Content */}
                 <h1 className="text-center">Our Skills</h1>
                 <CardGridListItem data={skillsObject} />
             </Container>

@@ -6,6 +6,7 @@ import { TwoColTextRight } from '../TwoCol'
 import './style.css'
 
 function Team() {
+    // TODO: Customize Client Object
     const teamObject = [
         {
             title: "Teammate 1",
@@ -23,7 +24,7 @@ function Team() {
             text: " Cliche occupy humblebrag, swag actually VHS vape normcore bespoke keffiyeh hammock trust fund paleo."
         }
     ]
-
+    // TODO: Customize Client Object
     const founderObject = {
         image: "./images/about.jpg",
         title: "About Our Founder",
@@ -36,6 +37,7 @@ function Team() {
     const teamContent = (
         <div>
             <Row>
+                {/* TODO: Customize Client Content */}
                 <h2 className="text-center headerTeamMembers">Our Team Members</h2>
             </Row>
             <Row>
@@ -48,6 +50,7 @@ function Team() {
         <>
             <span class="anchor" id="team" />
             <Container className="section-container">
+                {/* TODO: Customize Client Content */}
                 {founderContent}
                 {teamContent}
             </Container>

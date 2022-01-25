@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Card from 'react-bootstrap/Card'
 import { FaChevronDown } from 'react-icons/fa'
 
@@ -18,7 +18,11 @@ function CardComponent(props) {
                     {props.text}
                 </Card.Text>
                 {props.linkPath ?
-                    <div className="text-center caret"><a href={props.linkPath} target="_blank" rel="noreferrer"><FaChevronDown /></a></div>
+                    <div className="text-center caret">
+                        <a href={props.linkPath} target="_blank" rel="noreferrer">
+                            <FaChevronDown />
+                        </a>
+                    </div>
                     : <></>}
             </Card.Body>
         </Card>
@@ -44,7 +48,11 @@ function CardListContent(props) {
                     </ul>
                 </Card.Text>
                 {props.linkPath ?
-                    <div className="text-center caret"><a href={props.linkPath} target="_blank" rel="noreferrer"><FaChevronDown /></a></div>
+                    <div className="text-center caret">
+                        <a href={props.linkPath} target="_blank" rel="noreferrer">
+                            <FaChevronDown />
+                        </a>
+                    </div>
                     : <></>}
             </Card.Body>
         </Card>

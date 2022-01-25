@@ -4,6 +4,7 @@ import CarouselComponent from "../Carousel";
 import './style.css'
 
 function Quotes() {
+    // TODO: Customize Client Object
     const quoteObject = [
         {
             image: "./images/about.jpg",
@@ -28,6 +29,7 @@ function Quotes() {
             <span className="anchor" id="quotes" />
             <Container className="section-container">
                 <div className="text-center">
+                    {/* TODO: Customize Client Title */}
                     <h1>What People Are Saying</h1>
                 </div>
                 <CarouselComponent data={quoteObject} />

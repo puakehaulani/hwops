@@ -3,8 +3,6 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
-import Button from 'react-bootstrap/Button'
-import { Link } from 'react-router-dom'
 import { ContactCTA } from '../Contact'
 import CarouselComponent from '../Carousel'
 
@@ -17,7 +15,7 @@ function Banner(props) {
                 <Col className="my-auto textContainerBanner">
                     <Container>
                         <h1 >{props.data.header}</h1>
-                        <h4>{props.data.text}</h4>
+                        <h2>{props.data.text}</h2>
                         {props.data.cta ? <ContactCTA /> : <></>}
                     </Container>
 

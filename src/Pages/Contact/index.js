@@ -6,7 +6,7 @@ import Footer from '../../Components/Footer'
 import './style.css'
 
 function ContactPage() {
-
+    // TODO: Customize Client Object
     const bannerObject = {
         header: "HEADER FOR CONTACT",
         text: "Subheader for Contact",

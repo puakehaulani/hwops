@@ -1,11 +1,14 @@
-import React from "react"
+import React from 'react'
+import Image from 'react-bootstrap/Image'
 
+// TODO: update linkpath if needed
+import img from '../../assets/images/comingsoon.jpg'
 import './style.css'
 
 function ComingSoon() {
     return (
-        <div className="comingSoon">
-            <h1>Coming Soon!</h1>
+        <div className="pageView comingSoon ">
+            <Image src={img} fluid />
         </div>
 
     )

@@ -4,17 +4,19 @@ import Row from "react-bootstrap/Row"
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
-import { FaLinkedin, FaInstagramSquare, FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 
 import { FormSubmitAPIForm } from '../Form'
 import './style.css'
 
 function ContactCTA() {
     return (
+        // TODO: Customize Client Content
         <div className="contactCTA">
             Contact us for a consultation! <br />
             <Link to="/contact">
-                <Button>Connect</Button>
+                {/* TODO: Customize Button variant */}
+                <Button variant="dark">Connect</Button>
             </Link>
         </div>
 
@@ -25,6 +27,7 @@ function ContactSocialIcons() {
     return (
         <>
             {/* 
+                TODO: add or remove client icons from react icons
                 TODO: update hrefs with clients urls
                 TODO: update color on icons
             */}
@@ -37,6 +40,7 @@ function ContactSocialIcons() {
 }
 
 function Contact() {
+    // TODO: Customize Client Content
     return (
         <>
             <span class="anchor" id="contact" />

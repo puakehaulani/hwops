@@ -24,7 +24,10 @@ export function FormSubmitAPIForm() {
                     <Col><Form.Control as="textarea" name="message" placeholder="Message" style={{ height: '200px' }} required /></Col>
                 </Row>
                 <Row >
-                    <Col style={{ display: "flex", justifyContent: "end" }}><Button type="submit">Submit</Button></Col>
+                    <Col style={{ display: "flex", justifyContent: "end" }}>
+                        {/* TODO: Customize button variant to match client branding */}
+                        <Button variant="dark" type="submit">Submit</Button>
+                    </Col>
                 </Row>
             </Form >
         </Container >

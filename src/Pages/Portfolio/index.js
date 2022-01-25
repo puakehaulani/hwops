@@ -9,6 +9,7 @@ import Footer from '../../Components/Footer'
 import './style.css'
 
 function Portfolio() {
+    // TODO: Customize Client Object
     const bannerObject =
     {
         header: "HEADER FOR PORTFOLIO",
@@ -32,6 +33,7 @@ function Portfolio() {
         ],
         cta: true
     }
+    // TODO: Customize Client Object
     const portfolioObject = [
         {
             title: "Title 1",

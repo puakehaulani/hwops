@@ -2,7 +2,6 @@ import Carousel from 'react-bootstrap/Carousel'
 import './style.css'
 
 function CarouselComponent(props) {
-    console.log("Carousel props ", props)
     const carouselItems = props.data.map(i => (
         < Carousel.Item key={i.title} >
             <img

@@ -9,6 +9,7 @@ import Footer from '../../Components/Footer'
 import './style.css'
 
 function Landing() {
+    // TODO: Customize Client Object
     const heroObject =
     {
         image: "./images/logo.png",

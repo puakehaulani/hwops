@@ -7,6 +7,7 @@ import Image from 'react-bootstrap/Image'
 import { TwoColTextRight } from '../TwoCol'
 import './style.css'
 
+// TODO: Customize Client Object
 const aboutObject = {
     image: "./images/about.jpg",
     title: "About Company",
