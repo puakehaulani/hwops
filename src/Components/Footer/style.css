@@ -4,9 +4,11 @@
   width: 100%;
   text-align: center;
   padding-bottom: 5px;
+  font-family: "Spartan", sans-serif;
 }
 
 .footer a {
+  /* TODO: update color to match client branding */
   color: #bd9a75;
   text-decoration: none;
 }
@@ -14,6 +16,8 @@
 .footer a:hover {
   color: #b2a2b9;
   text-decoration: underline;
+  /* TODO: uncomment below to add easter egg pointer (max dimensions 32x32px) */
+  /* cursor: url(../../assets/images/egg.png), pointer; */
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
