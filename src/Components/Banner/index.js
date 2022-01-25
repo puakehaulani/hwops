@@ -36,14 +36,14 @@ function BannerCarousel(props) {
         <Container className="banner">
             <Row xs={1} sm={2}>
                 <Col className="my-auto textContainerBanner">
-                    <Container>
+                    <div>
                         <h1 >{props.data.header}</h1>
                         <h4>{props.data.text}</h4>
                         {props.data.cta ? <ContactCTA /> : <></>}
-                    </Container>
+                    </div>
 
                 </Col>
-                <Col className="image-container">
+                <Col>
                     <CarouselComponent data={props.data.carousel} />
                 </Col>
             </Row>
