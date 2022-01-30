@@ -27,50 +27,60 @@ Created with React and &hearts; by Lexi Scales
   - read:packages
   - admin:repo_hook (all)
 2. Create the access token in secrets manager that we will use below
-> `aws secretsmanager create-secret --name my-github-token --secret-string <GITHUB-PERSONAL-ACCESS-TOKEN>`  
+> `aws secretsmanager create-secret --name <SECRET-NAME> --secret-string <GITHUB-PERSONAL-ACCESS-TOKEN>`  
+3. Create live dev secret if needed for dev branch in amplify. Can be any rememberable string  
+> `aws secretsmanager create-secret --name <liveDevKey> --secret-string <LIVE-BRANCH-DEV-PASSKEY>`   
 
 ## Amplify CDK Setup
 In root of repo, run the following commands:  
 > `mkdir amplify-infra`  
 > `cd amplify-infra`  
 > `cdk init --language typescript`  
-> `npm install @aws-cdk/aws-codecommit @aws-cdk/aws-amplify`
+> `npm install @aws-cdk/aws-amplify`
 
 
 ### Code Templates for Amplify:
 
 #### ~/<react-app-name>/amplify-infra/lib/amplify-infra-stack.ts  
 ##### Paste the following:  
->    `import * as cdk from "@aws-cdk/core";
->    import * as amplify from '@aws-cdk/aws-amplify';
->   export class PROD_AmplifyInfraStack_<NAME-OF-APP> extends cdk.Stack {
->  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
->      super(scope, id, props);
->    const amplifyApp = new amplify.App(this, <NAME-OF-APP>, {
->      sourceCodeProvider: new amplify.GitHubSourceCodeProvider({
->        owner: <GITHUB-USERNAME>,
->        repository: <GITHUB-REPO-NAME>,
->        oauthToken: cdk.SecretValue.secretsManager('my-github-token'),
->      })
->    });
->    const mainBranch = amplifyApp.addBranch("main");
->    const devBranch = amplifyApp.addBranch("dev", {
->      basicAuth: amplify.BasicAuth.fromCredentials('admin', cdk.SecretValue.secretsManager('my-github-token'))
->    }); // this auth allows you to sign in with token to see dev branch live
->    const domain = amplifyApp.addDomain(<'DOMAIN-NAME.COM'>, {
->      enableAutoSubdomain: true, // in case subdomains should be auto registered for branches
->      autoSubdomainCreationPatterns: ['*', 'pr*'], // regex for branches that should auto register subdomains
->      });
->      domain.mapRoot(mainBranch); // map master branch to domain root
->      domain.mapSubDomain(mainBranch, 'www');
->      domain.mapSubDomain(devBranch); // sub domain prefix defaults to branch name
->      amplifyApp.addCustomRule(amplify.CustomRule.SINGLE_PAGE_APPLICATION_REDIRECT);
->      }
->    }`  
+   `import * as cdk from "@aws-cdk/core";
+   import * as amplify from '@aws-cdk/aws-amplify';  
+
+  export class PRODAmplifyInfraStack<NAME-OF-APP> extends cdk.Stack {
+ constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+     super(scope, id, props);
+   const amplifyApp = new amplify.App(this, <NAME-OF-APP>, {
+     sourceCodeProvider: new amplify.GitHubSourceCodeProvider({
+       owner: <GITHUB-USERNAME>,
+       repository: <GITHUB-REPO-NAME>,
+       oauthToken: cdk.SecretValue.secretsManager('<SECRET-NAME>'),
+     })
+   });
+   const mainBranch = amplifyApp.addBranch("main");
+   const devBranch = amplifyApp.addBranch("dev", {
+     basicAuth: amplify.BasicAuth.fromCredentials('admin', cdk.SecretValue.secretsManager('liveDevKey'))
+   }); // this auth allows you to sign in with token to see dev branch live
+   const domain = amplifyApp.addDomain(<'DOMAIN-NAME.COM'>, {
+     enableAutoSubdomain: true, // in case subdomains should be auto registered for branches
+     autoSubdomainCreationPatterns: ['*', 'pr*'], // regex for branches that should auto register subdomains
+     });
+     domain.mapRoot(mainBranch); // map master branch to domain root
+     domain.mapSubDomain(mainBranch, 'www');
+     domain.mapSubDomain(devBranch); // sub domain prefix defaults to branch name
+     amplifyApp.addCustomRule(amplify.CustomRule.SINGLE_PAGE_APPLICATION_REDIRECT); // required rule for amplify to handle SPA
+     }
+   }`  
 
 #### ~/<react-app-name>/amplify-infra/bin/amplify-infra.ts  
 ##### Paste the following:  
->  `env: { account: <accountnumber-from-aws>, region: <region-from-aws> }`  
+import "source-map-support/register";  
+import * as cdk from "@aws-cdk/core";  
+import { PRODAmplifyInfraStack<NAME-OF-APP> } from "../lib/amplify-infra-stack";  
+
+const app = new cdk.App();  
+new PRODAmplifyInfraStack<NAME-OF-APP>(app, "AmplifyInfraStack<NAME-OF-APP>", {  
+  env: { account: "<AWS-ACCOUNT-NUMBER", region: "<AWS-REGION>" },  
+});`  
 
 ## Build and Deploy
 >`cd ~/<react-app-name>/amplify-infra`  
