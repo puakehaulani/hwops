@@ -43,7 +43,7 @@ In root of repo, run the following commands:
 ##### Paste the following:  
 >    `import * as cdk from "@aws-cdk/core";
 >    import * as amplify from '@aws-cdk/aws-amplify';
->   export class AmplifyInfraStack extends cdk.Stack {
+>   export class PROD_AmplifyInfraStack_<NAME-OF-APP> extends cdk.Stack {
 >  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
 >      super(scope, id, props);
 >    const amplifyApp = new amplify.App(this, <NAME-OF-APP>, {
@@ -89,3 +89,5 @@ https://docs.aws.amazon.com/cdk/api/v2//docs/aws-amplify-alpha-readme.html
 https://docs.aws.amazon.com/amplify/latest/userguide/access-control.html
 
 https://github.com/nikovirtala/cdk-amplify-console
+
+https://aws.amazon.com/blogs/mobile/complete-guide-to-full-stack-ci-cd-workflows-with-aws-amplify/ (Connect deployed branch to the backend without CI/CD (automatic aws-exports.js generation)

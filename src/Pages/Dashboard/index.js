@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Amplify, { Auth, Hub } from 'aws-amplify';
 import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth';
-// import awsconfig from './aws-exports';
+// import awsconfig from '../../aws-exports';
 import Button from 'react-bootstrap/Button'
 import './style.css'
 
@@ -9,9 +9,6 @@ import './style.css'
 
 export default function Dashboard() {
 
-    const handleLogin = () => {
-        alert('Login')
-    }
 
     const [user, setUser] = useState(null);
     const [customState, setCustomState] = useState(null);
@@ -25,15 +22,17 @@ export default function Dashboard() {
                 case "signOut":
                     setUser(null);
                     break;
-                case "customOAuthState":
-                    setCustomState(data);
+                default:
+                    setUser(null)
+                    break
+                // case "customOAuthState":
+                //     setCustomState(data);
             }
         });
-
         Auth.currentAuthenticatedUser()
             .then(currentUser => setUser(currentUser))
             .catch(() => console.log("Not signed in"));
-        console.log("user is :", user)
+
         return unsubscribe;
     }, []);
 
@@ -43,8 +42,11 @@ export default function Dashboard() {
             <h1 className="text-center">Dashboard</h1>
 
             <div style={{ display: 'flex', height: '100vh', justifyContent: 'center', alignItems: 'center' }}>
+
                 <Button variant="dark" onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google })}>Sign In</Button>
+
                 <Button variant="outline-dark" onClick={() => Auth.signOut()}>Sign Out</Button>
+
 
             </div>
 
