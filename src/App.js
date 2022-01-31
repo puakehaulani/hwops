@@ -17,7 +17,7 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/comingsoon" element={<ComingSoon />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         <Route path="*" element={<NotFound />} />
 
         {/* Default Deployment Route */}
