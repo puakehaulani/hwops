@@ -46,6 +46,34 @@ Key: **my-github-token** Value: **GITHUB-PERSONAL-ACCESS-TOKEN**
     - Key: **liveDevKey** Value: **<memorable-string>**  
     - Secret name field: **Developer/liveDevKey**
 
+## Setup Client AWS Account  
+1. Walk client through basic AWS setup  
+2. In IAM Dashboard, edit the account alias to match client name or some other identifier  
+3. Create new User Group  
+    Name: administrator  
+    Permissions: AdministratorAccess  
+4. Create new User  
+    Name: <COMPANY-IDENTIFIER>_<DEVNAME>  
+    Password for console access  
+    Add to administrator group  
+    Finish setup, and save id, secret key, and password somewhere before closing window  
+5. Create new Role  
+    Choose Another AWS User 
+    AccountID: Dev's AWS Account ID   
+    Select 'Require MFA'  
+    Define Permissions (AdministratorAccess gives full access as fallback)
+    Role Name: TrustedDevAdmin  
+    Complete creating role  
+6. Add this Role to local aws config file using the command line and text editor  
+  `open ~/.aws/config`  
+    Add a new section for this client as follows:  
+    `[<PROFILE-NAME-CLIENT-IDENTIFIER>]`  
+    `source_profile=default`  
+    `role_arn=<TRUSTED-DEV-ADMIN-ROLE-ARN-VALUE>` *this is found in the Summary of the selected Role*  
+    Save and close
+7.  In the IAM Dashboard, find the prompt to setup MFA for the user, and setup with mobile app  
+8. Sign out and sign back in using IAM username and password, then change password when prompted  
+
 ## Amplify CDK Setup
 In root of repo, run the following commands:  
 > `mkdir amplify-infra`  
@@ -107,7 +135,7 @@ new PRODAmplifyInfraStack<NAME-OF-APP>(app, "AmplifyInfraStack<NAME-OF-APP>", {
 ## Build and Deploy
 >`cd ~/<react-app-name>/amplify-infra`  
 >`npm run build`  
->`cdk deploy`  
+>`cdk deploy --profile <PROFILE-NAME-CLIENT-IDENTIFIER>`  
 
 
 
