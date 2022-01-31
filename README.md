@@ -25,11 +25,26 @@ Created with React and &hearts; by Lexi Scales
 1. Create PERSONAL ACCESS TOKEN in Github account with following scopes:
   - repo (all)
   - read:packages
-  - admin:repo_hook (all)
-2. Create the access token in secrets manager that we will use below
-> `aws secretsmanager create-secret --name <SECRET-NAME> --secret-string <GITHUB-PERSONAL-ACCESS-TOKEN>`  
-3. Create live dev secret if needed for dev branch in amplify. Can be any rememberable string  
-> `aws secretsmanager create-secret --name <liveDevKey> --secret-string <LIVE-BRANCH-DEV-PASSKEY>`   
+  - admin:org (all) *for organization machine accounts*  
+  - admin:repo_hook (all)  
+  - admin:org_hook *for organization machine accounts*   
+
+2. Create the access token in secrets manager that we will use below  
+- Using command line:  
+  - >`aws secretsmanager create-secret --name <SECRET-NAME> --secret-string <GITHUB-PERSONAL-ACCESS-TOKEN>`  
+  -  Create live dev secret if needed for dev branch in amplify. Can be any rememberable string  
+  - > `aws secretsmanager create-secret --name <liveDevKey> --secret-string <LIVE-BRANCH-DEV-PASSKEY>`   
+- Using AWS Console:  
+  - In the Secrets Manager console, click 'Store a new Secret'  
+  - Select 'Other Type of Secret'  
+Key: **my-github-token** Value: **GITHUB-PERSONAL-ACCESS-TOKEN**  
+  - Click Next  
+  - Secret name field: **Developer/githubMachine**  
+  - Click next all the way through the rest of the screens and save the secret  
+  
+  - Create live dev secret if needed for dev subdomain in amplify. Can be any rememberable string 
+    - Key: **liveDevKey** Value: **<memorable-string>**  
+    - Secret name field: **Developer/liveDevKey**
 
 ## Amplify CDK Setup
 In root of repo, run the following commands:  
@@ -43,22 +58,28 @@ In root of repo, run the following commands:
 
 #### ~/<react-app-name>/amplify-infra/lib/amplify-infra-stack.ts  
 ##### Paste the following:  
-   `import * as cdk from "@aws-cdk/core";
+   `
+   import * as cdk from "@aws-cdk/core";  
    import * as amplify from '@aws-cdk/aws-amplify';  
-
-  export class PRODAmplifyInfraStack<NAME-OF-APP> extends cdk.Stack {
- constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+   export class PRODAmplifyInfraStack<NAME-OF-APP> extends cdk.Stack {
+    constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
      super(scope, id, props);
-   const amplifyApp = new amplify.App(this, <NAME-OF-APP>, {
+    const amplifyApp = new amplify.App(this, <NAME-OF-APP>, {
      sourceCodeProvider: new amplify.GitHubSourceCodeProvider({
        owner: <GITHUB-USERNAME>,
        repository: <GITHUB-REPO-NAME>,
-       oauthToken: cdk.SecretValue.secretsManager('<SECRET-NAME>'),
+       oauthToken: cdk.SecretValue.secretsManager(
+          "Developer/githubMachine",
+          { jsonField: "my-github-token" }
+       ),
      })
    });
-   const mainBranch = amplifyApp.addBranch("main");
+   const mainBranch = amplifyApp.addBranch("main");  
    const devBranch = amplifyApp.addBranch("dev", {
-     basicAuth: amplify.BasicAuth.fromCredentials('admin', cdk.SecretValue.secretsManager('liveDevKey'))
+     basicAuth: amplify.BasicAuth.fromCredentials('admin', cdk.SecretValue.secretsManager( //this is for a protected dev branch
+        "Developer/liveDevKey",
+          { jsonField: "liveDevKey" } //this is the password to be entered to see the live site before pushing to main
+     ))
    }); // this auth allows you to sign in with token to see dev branch live
    const domain = amplifyApp.addDomain(<'DOMAIN-NAME.COM'>, {
      enableAutoSubdomain: true, // in case subdomains should be auto registered for branches
@@ -69,7 +90,8 @@ In root of repo, run the following commands:
      domain.mapSubDomain(devBranch); // sub domain prefix defaults to branch name
      amplifyApp.addCustomRule(amplify.CustomRule.SINGLE_PAGE_APPLICATION_REDIRECT); // required rule for amplify to handle SPA
      }
-   }`  
+   }
+   `  
 
 #### ~/<react-app-name>/amplify-infra/bin/amplify-infra.ts  
 ##### Paste the following:  

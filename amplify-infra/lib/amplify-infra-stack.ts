@@ -8,13 +8,20 @@ export class PRODAmplifyInfraStackSIMPLETEMPLATE extends cdk.Stack {
       sourceCodeProvider: new amplify.GitHubSourceCodeProvider({
         owner: "puakehaulani",
         repository: "template-smallbusiness-simple",
-        oauthToken: cdk.SecretValue.secretsManager("my-github-token"),
+        oauthToken: cdk.SecretValue.secretsManager("Developer/githubPersonal", {
+          jsonField: "my-github-token",
+        }),
       }),
     });
     const mainBranch = amplifyApp.addBranch("main");
-    //  const devBranch = amplifyApp.addBranch("dev", {
-    //    basicAuth: amplify.BasicAuth.fromCredentials('admin', cdk.SecretValue.secretsManager('github-machine'))
-    //  }); // this auth allows you to sign in with token to see dev branch live
+    // const devBranch = amplifyApp.addBranch("dev", {
+    //   basicAuth: amplify.BasicAuth.fromCredentials(
+    //     "admin",
+    //     cdk.SecretValue.secretsManager("Developer/liveDevKey", {
+    //       jsonField: "liveDevKey",
+    //     })
+    //   ),
+    // }); // this auth allows you to sign in with token to see dev branch live
     //  const domain = amplifyApp.addDomain(<'DOMAIN-NAME.COM'>, {
     //    enableAutoSubdomain: true, // in case subdomains should be auto registered for branches
     //    autoSubdomainCreationPatterns: ['*', 'pr*'], // regex for branches that should auto register subdomains
