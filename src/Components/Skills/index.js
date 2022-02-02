@@ -27,7 +27,7 @@ function Skills() {
     ]
     return (
         <>
-            <span class="anchor" id="skills" />
+            <span className="anchor" id="skills" />
             <Container className="section-container">
                 {/* TODO: Customize Client Content */}
                 <h1 className="text-center">Our Skills</h1>
