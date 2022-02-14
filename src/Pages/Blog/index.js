@@ -2,8 +2,9 @@ import Container from 'react-bootstrap/Container'
 
 import Navigation from '../../Components/Navigation'
 import Banner from '../../Components/Banner'
+import { FeaturedBlog } from '../../Components/Blog'
 import CardGrid from '../../Components/CardGrid'
-import { ContactCTA } from '../../Components/Contact'
+import { CustomContactCTA } from '../../Components/Contact'
 import Footer from '../../Components/Footer'
 import './style.css'
 
@@ -55,17 +56,33 @@ function BlogHub() {
         },
 
     ]
+
+    const featuredPostObject = {
+        title: 'Featured Post',
+        image: './images/about.jpg',
+        subtitle: 'post title',
+        date: 'date here',
+        text: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?',
+        linkPath: 'https://www.google.com',
+
+    }
+    const customContactObject = {
+        text: 'Like what you see? Let me build your blog!',
+        button: 'Connect'
+    }
     return (
         <div className="pageView">
             <Navigation />
             <Container className="pageContent">
                 <Banner data={bannerObject} />
+                <div className="title-text">Company Blog</div>
+                <FeaturedBlog data={featuredPostObject} />
                 <div className=" section-container">
                     <CardGrid data={blogObject} />
                 </div>
-                {/* <div className="text-center">
-                    <ContactCTA />
-                </div> */}
+                <div className="text-center">
+                    <CustomContactCTA data={customContactObject} />
+                </div>
             </Container>
             <Footer />
         </div>

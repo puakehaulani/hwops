@@ -23,6 +23,21 @@ function ContactCTA() {
     )
 }
 
+export const CustomContactCTA = (props) => {
+    return (
+        // TODO: Customize Client Content
+        <div className="contactCTA">
+            {props.data.text} <br />
+            <Link to="/contact">
+                {/* TODO: Customize Button variant */}
+                <Button variant="dark">{props.data.button}</Button>
+            </Link>
+        </div>
+
+    )
+}
+
+
 function ContactSocialIcons() {
     return (
         <>
