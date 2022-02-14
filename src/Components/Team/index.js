@@ -48,7 +48,7 @@ function Team() {
 
     return (
         <>
-            <span class="anchor" id="team" />
+            <span className="anchor" id="team" />
             <Container className="section-container">
                 {/* TODO: Customize Client Content */}
                 {founderContent}

@@ -43,7 +43,7 @@ function Contact() {
     // TODO: Customize Client Content
     return (
         <>
-            <span class="anchor" id="contact" />
+            <span className="anchor" id="contact" />
             <Container className="section-container">
                 <Row xs={1} sm={2} style={{ display: "flex", justifyContent: "center", alignItems: 'center' }}>
                     <Col sm={4} className="text-center">
