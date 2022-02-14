@@ -151,3 +151,5 @@ https://docs.aws.amazon.com/amplify/latest/userguide/access-control.html
 https://github.com/nikovirtala/cdk-amplify-console
 
 https://aws.amazon.com/blogs/mobile/complete-guide-to-full-stack-ci-cd-workflows-with-aws-amplify/ (Connect deployed branch to the backend without CI/CD (automatic aws-exports.js generation)
+
+https://docs.amplify.aws/lib/auth/social/q/platform/js/#setup-frontend
