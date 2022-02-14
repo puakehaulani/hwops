@@ -5,7 +5,7 @@ import Image from 'react-bootstrap/Image'
 
 import './style.css'
 
-function Navigation() {
+export const Navigation = () => {
     /*
         Transparent to Opaque Nav Background Transition on scroll
      */
@@ -53,4 +53,3 @@ function Navigation() {
     )
 }
 
-export default Navigation

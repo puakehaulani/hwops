@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import './style.css'
 
-export default function Logout() {
+export const Logout = () => {
     const navigate = useNavigate()
     useEffect(() => {
         setTimeout(() => {

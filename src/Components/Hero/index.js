@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row'
 import { ContactCTA } from '../Contact'
 import './style.css'
 
-function Hero(props) {
+export const Hero = (props) => {
 
     return (
         <div className="hero">
@@ -28,5 +28,3 @@ function Hero(props) {
         </div>
     )
 }
-
-export default Hero

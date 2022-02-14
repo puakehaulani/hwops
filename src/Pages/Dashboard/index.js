@@ -1,67 +1,12 @@
-import React, { useEffect, useState, useContext } from 'react';
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button'
-import { Auth, Hub } from 'aws-amplify';
 import { Link } from 'react-router-dom'
-import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth';
 import { AuthContext, useAuth } from '../../Contexts/UserContext';
 import './style.css'
 
-export default function Dashboard() {
-    const { currentUser, setCurrentUser } = useContext(AuthContext)
-    const [loading, setLoading] = useState(true);
-    const { signIn, signOut, checkUser } = useAuth()
-    // useEffect(() => {
-    //     console.log("Dashboard currentUser: ", currentUser)
-    // }, [currentUser])
-
-    // useEffect(() => {
-    //     Auth.currentAuthenticatedUser()
-    //         .then(user => setCurrentUser(user))
-    // }, [])
-
-    // const signIn = () => {
-    //     Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google })
-    //         .then(data => console.log(data))
-    //         .catch(err => console.log(err))
-    // }
-
-    // const signOut = () => {
-    //     Auth.signOut()
-    //         .then(data => console.log(data))
-    //         .catch(err => console.log(err))
-    // }
-
-    // const checkUser = () => {
-    //     Auth.currentAuthenticatedUser()
-    //         .then(user => console.log("cognitoUser ", user, "app User ", currentUser))
-    //         .catch(err => console.log(err))
-    // }
-
-    // useEffect(() => {
-    //     const unsubscribe = Hub.listen("auth", ({ payload: { event, data } }) => {
-    //         switch (event) {
-    //             case "signUp":
-    //                 setCurrentUser(data)
-    //                 setLoading(false)
-    //                 break
-    //             case "signIn":
-    //                 setCurrentUser(data)
-    //                 setLoading(false)
-    //                 break
-    //             case "signOut":
-    //                 setCurrentUser(null)
-    //                 console.log("logout ", currentUser)
-    //                 setLoading(false)
-    //                 break
-    //             default:
-    //                 break
-
-    //         }
-    //     });
-    //     return unsubscribe;
-    // }, [])
+export const Dashboard = () => {
+    // const { currentUser } = useContext(AuthContext)
+    const { currentUser, signIn, signOut, checkUser } = useAuth()
     return (
         <div className="pageDash pageView">
             <h1 className="text-center">Dashboard</h1>

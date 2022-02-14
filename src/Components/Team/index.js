@@ -5,7 +5,7 @@ import CardGrid from '../CardGrid'
 import { TwoColTextRight } from '../TwoCol'
 import './style.css'
 
-function Team() {
+export const Team = () => {
     // TODO: Customize Client Object
     const teamObject = [
         {
@@ -57,5 +57,3 @@ function Team() {
         </>
     )
 }
-
-export default Team

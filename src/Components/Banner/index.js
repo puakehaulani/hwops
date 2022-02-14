@@ -8,7 +8,7 @@ import CarouselComponent from '../Carousel'
 
 import './style.css'
 
-function Banner(props) {
+export const Banner = (props) => {
     return (
         <Container className="banner">
             <Row xs={1} sm={2}>
@@ -28,8 +28,7 @@ function Banner(props) {
     )
 }
 
-function BannerCarousel(props) {
-    console.log(props)
+export const BannerCarousel = (props) => {
     return (
         <Container className="banner">
             <Row xs={1} sm={2}>
@@ -48,6 +47,3 @@ function BannerCarousel(props) {
         </Container>
     )
 }
-
-export default Banner
-export { BannerCarousel }

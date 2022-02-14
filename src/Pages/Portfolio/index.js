@@ -1,14 +1,14 @@
 import Container from 'react-bootstrap/Container'
 
-import Navigation from '../../Components/Navigation'
+import { Navigation } from '../../Components/Navigation'
 import { BannerCarousel } from '../../Components/Banner'
 import CardGrid from '../../Components/CardGrid'
 import { ContactCTA } from '../../Components/Contact'
-import Quotes from '../../Components/Quotes'
-import Footer from '../../Components/Footer'
+import { Quotes } from '../../Components/Quotes'
+import { Footer } from '../../Components/Footer'
 import './style.css'
 
-function Portfolio() {
+export const Portfolio = () => {
     // TODO: Customize Client Object
     const bannerObject =
     {
@@ -89,5 +89,3 @@ function Portfolio() {
         </div>
     )
 }
-
-export default Portfolio

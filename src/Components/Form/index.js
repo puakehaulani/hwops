@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-export function FormSubmitAPIForm() {
+export const FormSubmitAPIForm = () => {
     return (
         <Container className="contactForm">
             {/* TODO: update email below to clients email */}

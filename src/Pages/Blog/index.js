@@ -1,14 +1,14 @@
 import Container from 'react-bootstrap/Container'
 
-import Navigation from '../../Components/Navigation'
-import Banner from '../../Components/Banner'
+import { Navigation } from '../../Components/Navigation'
+import { Banner } from '../../Components/Banner'
 import { FeaturedBlog } from '../../Components/Blog'
 import CardGrid from '../../Components/CardGrid'
 import { CustomContactCTA } from '../../Components/Contact'
-import Footer from '../../Components/Footer'
+import { Footer } from '../../Components/Footer'
 import './style.css'
 
-function BlogHub() {
+export const BlogHub = () => {
     // TODO: Customize Client Object
     const bannerObject =
     {
@@ -89,4 +89,3 @@ function BlogHub() {
     )
 }
 
-export default BlogHub

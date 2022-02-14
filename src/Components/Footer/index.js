@@ -4,7 +4,7 @@ import { FaHeart } from 'react-icons/fa';
 import { ContactSocialIcons } from '../Contact';
 import './style.css'
 
-function Footer() {
+export const Footer = () => {
 
     return (
         <div className="footer" fixed="bottom">
@@ -15,5 +15,3 @@ function Footer() {
         </div>
     )
 }
-
-export default Footer

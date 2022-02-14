@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 
 
-export function TwoColTextRight(props) {
+export const TwoColTextRight = (props) => {
     return (
         <Row xs={1} sm={2}>
             <Col className="image-container">
@@ -20,7 +20,7 @@ export function TwoColTextRight(props) {
     )
 }
 
-export function TwoColTextLeft(props) {
+export const TwoColTextLeft = (props) => {
     return (
         <Row xs={1} sm={2}>
             <Col className="text-center my-auto textContainerAbout">

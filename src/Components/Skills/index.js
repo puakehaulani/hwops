@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container'
 import { CardGridListItem } from '../CardGrid'
 import './style.css'
 
-function Skills() {
+export const Skills = () => {
     // TODO: Customize Client Object
 
     const skillsObject = [
@@ -37,4 +37,3 @@ function Skills() {
     )
 }
 
-export default Skills

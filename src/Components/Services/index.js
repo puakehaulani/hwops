@@ -5,7 +5,7 @@ import CardGrid from '../CardGrid'
 
 import './style.css'
 
-function Services() {
+export const Services = () => {
     // TODO: Customize Client Object
     const servicesObject = [
         {
@@ -35,5 +35,3 @@ function Services() {
             </Container></>
     )
 }
-
-export default Services
