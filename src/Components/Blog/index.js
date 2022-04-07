@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
-import { TwoColTextRight } from '../TwoCol'
 import { Link, useParams } from 'react-router-dom'
+import DOMPurify from 'dompurify'
 import axios from 'axios'
-
 import './style.css'
 
 export const FeaturedBlog = (props) => {
@@ -87,10 +87,11 @@ export const ExpandedBlog = () => {
     }, [])
 
     if (!loading) {
+        const clean = DOMPurify.sanitize(postData.content)
         post =
             <>
-                Expanded Blog {postData.title}
-                <div dangerouslySetInnerHTML={{ __html: postData.content }}></div>
+                Expanded Blog:{postData.title}
+                <div dangerouslySetInnerHTML={{ __html: clean }} style={{ maxWidth: 200, backgroundColor: 'pink' }}></div>
             </>
     }
     return post
