@@ -102,7 +102,19 @@ export const BlogHub = () => {
 }
 
 export const BlogPost = () => {
-    return <ExpandedBlog />
+    return (
+        <div className='pageView'>
+            <Navigation />
+            <Container className='pageContent'>
+                <ExpandedBlog />
+                <div className="text-center">
+                    <CustomContactCTA data={customContactObject} />
+                </div>
+            </Container>
+            <Footer />
+        </div>
+
+    )
 }
 
 export const BlogScroll = () => {
