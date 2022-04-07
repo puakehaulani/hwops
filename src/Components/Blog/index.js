@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import { Link, useParams } from 'react-router-dom'
+import moment from 'moment'
 import DOMPurify from 'dompurify'
 import axios from 'axios'
 import './style.css'
@@ -55,7 +56,7 @@ export const BlogPostList = (props) => {
                 </Col> */}
                     {/* <Col> */}
                     <h1>{i.title}</h1>
-                    <div style={{ fontSize: 'small' }}>{i.published}</div>
+                    <div style={{ fontSize: 'small' }}>{moment(i.published).format('MMMM Do YYYY')}</div>
                     {/* <p>{i.content}</p> */}
                     {/* </Col> */}
                 </Link>
@@ -88,9 +89,18 @@ export const ExpandedBlog = () => {
 
     if (!loading) {
         const clean = DOMPurify.sanitize(postData.content)
+        const postDate = moment(postData.published).format('MMMM Do YYYY')
+        /**
+         * TODO: edit published to be readable
+         * TODO: style title and container
+         * TODO: figure out how to adjust image size inside html (look up string methods)
+         * replace, with global flag? https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#specifying_a_string_as_a_parameter
+         * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#replacing_a_fahrenheit_degree_with_its_celsius_equivalent
+         */
         post =
             <>
-                Expanded Blog:{postData.title}
+                {postData.title}
+                {postDate}
                 <div dangerouslySetInnerHTML={{ __html: clean }} style={{ maxWidth: 200, backgroundColor: 'pink' }}></div>
             </>
     }
