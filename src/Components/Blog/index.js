@@ -68,10 +68,31 @@ export const BlogPostList = (props) => {
 }
 
 export const ExpandedBlog = () => {
+    const [loading, setLoading] = useState(true)
+    const [postData, setPostData] = useState()
     const { postId } = useParams()
+    let post = null
     console.log('ID IS', postId)
-    return (
-        <>Expanded Blog </>
-    )
+
+    useEffect(() => {
+        axios.get(`https://www.googleapis.com/blogger/v3/blogs/3028947027384433257/posts/${postId}?key=AIzaSyDIaK6M-3YSxi_ToWRM622BOXA2ErVkbZk&fields=published, title, content`)
+            .then(res => {
+                console.log(res.data)
+                setPostData(res.data)
+                setLoading(false)
+            }
+            )
+            .catch(err => console.log(err))
+
+    }, [])
+
+    if (!loading) {
+        post =
+            <>
+                Expanded Blog {postData.title}
+                <div dangerouslySetInnerHTML={{ __html: postData.content }}></div>
+            </>
+    }
+    return post
 }
 
