@@ -35,7 +35,7 @@ export const BlogPostList = (props) => {
     }, [postsRaw])
 
     useEffect(() => {
-        axios.get('https://www.googleapis.com/blogger/v3/blogs/3028947027384433257/posts?key=AIzaSyDIaK6M-3YSxi_ToWRM622BOXA2ErVkbZk&fields=items(id,published, title)')
+        axios.get('https://www.googleapis.com/blogger/v3/blogs/3028947027384433257/posts?key=AIzaSyDIaK6M-3YSxi_ToWRM622BOXA2ErVkbZk&fields=items(id,published, title)&maxResults=50')
             .then(res => {
                 console.log(res.data.items)
                 setPostsRaw(res.data.items)
@@ -46,9 +46,11 @@ export const BlogPostList = (props) => {
 
     }, [])
     if (!loading) {
+        /**
+         * TODO: pull out first image for thumbnail
+         * TODO: styling
+         */
         posts = postsRaw.map(i => (
-            // console.log(i)
-
             <Row className="blogListRow" key={i.id}>
                 <Link to={{ pathname: `/blog/post/${i.id}` }} >
                     {/* <Col md={3}>
@@ -73,7 +75,6 @@ export const ExpandedBlog = () => {
     const [postData, setPostData] = useState()
     const { postId } = useParams()
     let post = null
-    console.log('ID IS', postId)
 
     useEffect(() => {
         axios.get(`https://www.googleapis.com/blogger/v3/blogs/3028947027384433257/posts/${postId}?key=AIzaSyDIaK6M-3YSxi_ToWRM622BOXA2ErVkbZk&fields=published, title, content`)
@@ -99,9 +100,9 @@ export const ExpandedBlog = () => {
          */
         post =
             <>
-                {postData.title}
-                {postDate}
-                <div dangerouslySetInnerHTML={{ __html: clean }} style={{ maxWidth: 200, backgroundColor: 'pink' }}></div>
+                <h1>{postData.title}</h1>
+                <div style={{ fontSize: 'small' }}>{postDate}</div>
+                <div dangerouslySetInnerHTML={{ __html: clean }}></div>
             </>
     }
     return post
