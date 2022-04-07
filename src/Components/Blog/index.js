@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import { TwoColTextRight } from '../TwoCol'
+import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 
 import './style.css'
@@ -33,7 +34,7 @@ export const BlogPostList = (props) => {
     }, [postsRaw])
 
     useEffect(() => {
-        axios.get('https://www.googleapis.com/blogger/v3/blogs/3028947027384433257/posts?key=AIzaSyDIaK6M-3YSxi_ToWRM622BOXA2ErVkbZk&fields=items(id,published, url,title,content)')
+        axios.get('https://www.googleapis.com/blogger/v3/blogs/3028947027384433257/posts?key=AIzaSyDIaK6M-3YSxi_ToWRM622BOXA2ErVkbZk&fields=items(id,published, title)')
             .then(res => {
                 console.log(res.data.items)
                 setPostsRaw(res.data.items)
@@ -46,8 +47,9 @@ export const BlogPostList = (props) => {
     if (!loading) {
         posts = postsRaw.map(i => (
             // console.log(i)
-            <a href={i.url} target='_blank' rel="noreferrer" >
-                <Row key={i.id} className="blogListRow">
+
+            <Row className="blogListRow" key={i.id}>
+                <Link to={{ pathname: `/blog/post/${i.id}` }} >
                     {/* <Col md={3}>
                     <Image src={i.image} height={400} width={400} rounded fluid />
                 </Col> */}
@@ -56,8 +58,9 @@ export const BlogPostList = (props) => {
                     <div style={{ fontSize: 'small' }}>{i.published}</div>
                     {/* <p>{i.content}</p> */}
                     {/* </Col> */}
-                </Row>
-            </a>
+                </Link>
+            </Row >
+
         ))
     }
 
@@ -65,8 +68,10 @@ export const BlogPostList = (props) => {
 }
 
 export const ExpandedBlog = () => {
+    const { postId } = useParams()
+    console.log('ID IS', postId)
     return (
-        <>Expanded Blog</>
+        <>Expanded Blog </>
     )
 }
 
