@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import { TwoColTextRight } from '../TwoCol'
+import axios from 'axios'
 
 import './style.css'
 
@@ -23,21 +24,43 @@ export const FeaturedBlog = (props) => {
 }
 
 export const BlogPostList = (props) => {
-    console.log("blog post list props", props)
-    const posts = props.data.map(i => (
-        // console.log(i)
-        <Row key={i.id} className="blogListRow">
-            {/* <Col md={3}>
-                <Image src={i.image} height={400} width={400} rounded fluid />
-            </Col> */}
-            {/* <Col> */}
-            <h1>{i.title}</h1>
-            <div style={{ fontSize: 'small' }} >{i.date}</div>
-            <p>{i.text}</p>
-            {/* </Col> */}
-        </Row>
-    ))
-    // console.log(posts)
+    const [postsRaw, setPostsRaw] = useState()
+    const [loading, setLoading] = useState(true)
+    let posts = null
+
+    useEffect(() => {
+        console.log("posts raw response", postsRaw)
+    }, [postsRaw])
+
+    useEffect(() => {
+        axios.get('https://www.googleapis.com/blogger/v3/blogs/3028947027384433257/posts?key=AIzaSyDIaK6M-3YSxi_ToWRM622BOXA2ErVkbZk&fields=items(id,published, url,title,content)')
+            .then(res => {
+                console.log(res.data.items)
+                setPostsRaw(res.data.items)
+                setLoading(false)
+            }
+            )
+            .catch(err => console.log(err))
+
+    }, [])
+    if (!loading) {
+        posts = postsRaw.map(i => (
+            // console.log(i)
+            <a href={i.url} target='_blank' rel="noreferrer" >
+                <Row key={i.id} className="blogListRow">
+                    {/* <Col md={3}>
+                    <Image src={i.image} height={400} width={400} rounded fluid />
+                </Col> */}
+                    {/* <Col> */}
+                    <h1>{i.title}</h1>
+                    <div style={{ fontSize: 'small' }}>{i.published}</div>
+                    {/* <p>{i.content}</p> */}
+                    {/* </Col> */}
+                </Row>
+            </a>
+        ))
+    }
+
     return posts
 }
 

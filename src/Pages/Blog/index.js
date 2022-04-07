@@ -115,7 +115,7 @@ export const BlogScroll = () => {
                 <FeaturedBlog data={featuredPostObject} />
                 <div className=" section-container">
                     {/* <CardGrid data={blogObject} /> */}
-                    <BlogPostList data={blogObject} />
+                    <BlogPostList />
                 </div>
                 <div className="text-center">
                     <CustomContactCTA data={customContactObject} />
