@@ -71,15 +71,15 @@ export const Portfolio = () => {
         <div className="pageView">
             <Navigation />
             <Container className="pageContent">
-                {/* <BannerCarousel data={bannerObject} />
+                <BannerCarousel data={bannerObject} />
                 <div className="portfolioFolders section-container">
                     <CardGrid data={portfolioObject} />
                 </div>
+                <CardList data={portfolioObject} />
                 <div className="text-center">
                     <ContactCTA />
                 </div>
-                <Quotes /> */}
-                <CardList data={portfolioObject} />
+                <Quotes />
             </Container>
             <Footer />
         </div>
