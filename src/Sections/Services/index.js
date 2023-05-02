@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 
-import CardGrid from '../CardGrid'
+import { CardGrid } from '../../Components/CardGrid'
 
 import './style.css'
 

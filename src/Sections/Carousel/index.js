@@ -1,7 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel'
 import './style.css'
 
-function CarouselComponent(props) {
+export const CarouselComponent = (props) => {
     const carouselItems = props.data.map(i => (
         < Carousel.Item key={i.title} >
             <img
@@ -28,4 +28,3 @@ function CarouselComponent(props) {
     )
 }
 
-export default CarouselComponent

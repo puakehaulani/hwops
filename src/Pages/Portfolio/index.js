@@ -1,11 +1,6 @@
 import Container from 'react-bootstrap/Container'
-
-import { Navigation } from '../../Components/Navigation'
-import { BannerCarousel } from '../../Components/Banner'
-import CardGrid from '../../Components/CardGrid'
-import { ContactCTA } from '../../Components/Contact'
-import { Quotes } from '../../Components/Quotes'
-import { Footer } from '../../Components/Footer'
+import { Navigation, CardGrid } from '../../Components'
+import { BannerCarousel, ContactCTA, Quotes, Footer } from '../../Sections'
 import './style.css'
 
 export const Portfolio = () => {
