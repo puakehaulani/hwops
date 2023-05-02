@@ -1,5 +1,5 @@
 import Container from 'react-bootstrap/Container'
-import { Navigation, CardGrid } from '../../Components'
+import { Navigation, CardGrid, CardList } from '../../Components'
 import { BannerCarousel, ContactCTA, Quotes, Footer } from '../../Sections'
 import './style.css'
 
@@ -71,14 +71,15 @@ export const Portfolio = () => {
         <div className="pageView">
             <Navigation />
             <Container className="pageContent">
-                <BannerCarousel data={bannerObject} />
+                {/* <BannerCarousel data={bannerObject} />
                 <div className="portfolioFolders section-container">
                     <CardGrid data={portfolioObject} />
                 </div>
                 <div className="text-center">
                     <ContactCTA />
                 </div>
-                <Quotes />
+                <Quotes /> */}
+                <CardList data={portfolioObject} />
             </Container>
             <Footer />
         </div>
