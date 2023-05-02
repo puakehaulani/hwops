@@ -24,12 +24,11 @@ export const CardGrid = (props) => {
 }
 
 export const CardList = (props) => {
-    console.log('card list props', props)
-    const list = props.map((i) => {
-        console.log('card list map i = ', i)
+    const list = props.data.map((i) => {
         return CardListItem(i)
     })
     return list
+
 }
 
 export const CardGridItem = (props) => {
@@ -50,17 +49,16 @@ export const CardGridItem = (props) => {
 
 
 export const CardListItem = (item) => {
-
     return (
         <Container style={{ backgroundColor: 'linen', marginTop: 20, padding: 20 }}>
             <Row xs={1} sm={2}>
                 <Col className="image-container">
-                    <Image src={item.img} rounded fluid />
+                    <Image src={item.image} rounded fluid />
                 </Col>
                 <Col className=" my-auto textContainerAbout">
-                    {item.link ? <a href={item.link}>
+                    {item.linkPath ? <a href={item.linkPath}>
                         <h3>{item.title.toUpperCase()}</h3></a> : <h3>{item.title.toUpperCase()}</h3>}
-                    {item.description}
+                    {item.text}
                 </Col>
             </Row>
         </Container>
