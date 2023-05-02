@@ -4,7 +4,7 @@ import { FaChevronDown } from 'react-icons/fa'
 
 import './style.css'
 
-function CardComponent(props) {
+export const CardComponent = (props) => {
     return (
         <Card style={{ borderStyle: "none", borderRadius: 0, backgroundColor: "transparent" }}>
             {props.gallery ?
@@ -29,7 +29,7 @@ function CardComponent(props) {
     )
 }
 
-function CardListContent(props) {
+export const CardListContent = (props) => {
 
     const arr = props.listItem.map(i => <li>{i}</li>)
 
@@ -60,5 +60,3 @@ function CardListContent(props) {
 }
 
 
-export default CardComponent
-export { CardListContent }

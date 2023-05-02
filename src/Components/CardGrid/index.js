@@ -4,10 +4,10 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 
-import CardComponent, { CardListContent } from '../Card'
+import { CardComponent, CardListContent } from '../Card'
 import './style.css'
 
-function CardGrid(props) {
+export const CardGrid = (props) => {
     const colContent = props.data.map(i => (
         <Col key={i.title}>
             <CardComponent image={i.image} title={i.title} text={i.text} linkPath={i.linkPath} gallery={i.gallery} />
@@ -48,10 +48,7 @@ export const CardGridItem = (props) => {
     )
 }
 
-<<<<<<< Updated upstream
-export default CardGrid
-export { CardGridListItem }
-=======
+
 export const CardListItem = (item) => {
 
     return (
@@ -70,4 +67,3 @@ export const CardListItem = (item) => {
     )
 }
 
->>>>>>> Stashed changes

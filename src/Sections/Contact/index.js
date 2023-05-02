@@ -6,10 +6,10 @@ import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
 import { FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 
-import { FormSubmitAPIForm } from '../Form'
+import { FormSubmitAPIForm } from '../../Components/Form'
 import './style.css'
 
-function ContactCTA() {
+export const ContactCTA = () => {
     return (
         // TODO: Customize Client Content
         <div className="contactCTA">
@@ -38,7 +38,7 @@ export const CustomContactCTA = (props) => {
 }
 
 
-function ContactSocialIcons() {
+export const ContactSocialIcons = () => {
     return (
         <>
             {/* 
@@ -54,7 +54,7 @@ function ContactSocialIcons() {
     )
 }
 
-function Contact() {
+export const Contact = () => {
     // TODO: Customize Client Content
     return (
         <>
@@ -79,5 +79,3 @@ function Contact() {
 
 
 
-export default Contact
-export { ContactCTA, ContactSocialIcons }

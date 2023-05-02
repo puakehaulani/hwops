@@ -1,8 +1,8 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import CardGrid from '../CardGrid'
-import { TwoColTextRight } from '../TwoCol'
+import { CardGrid } from '../../Components/CardGrid'
+import { TwoColTextRight } from '../../Components/TwoCol'
 import './style.css'
 
 export const Team = () => {
