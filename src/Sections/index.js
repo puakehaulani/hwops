@@ -1,0 +1,12 @@
+export * from './About'
+export * from './Banner'
+export * from './Blog'
+export * from './Carousel'
+export * from './Contact'
+export * from './Footer'
+export * from './Hero'
+export * from './Quotes'
+export * from './Services'
+export * from './Skills'
+export * from './Team'
+

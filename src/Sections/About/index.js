@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 
-import { TwoColTextRight } from '../TwoCol'
+import { TwoColTextRight } from '../../Components/TwoCol'
 import './style.css'
 
 // TODO: Customize Client Object

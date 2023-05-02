@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container'
 
-import CarouselComponent from "../Carousel";
+import { CarouselComponent } from "../Carousel";
 import './style.css'
 
 export const Quotes = () => {

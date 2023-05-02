@@ -1,8 +1,5 @@
-import { Navigation } from '../../Components/Navigation'
-import { Banner } from '../../Components/Banner'
-import Contact from '../../Components/Contact'
-import { Footer } from '../../Components/Footer'
-
+import { Navigation } from '../../Components'
+import { Banner, Contact, Footer } from '../../Sections'
 import './style.css'
 
 export const ContactPage = () => {

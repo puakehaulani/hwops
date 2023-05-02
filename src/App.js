@@ -4,7 +4,7 @@ import { ComingSoon } from './Pages/ComingSoon'
 import { Home } from './Pages/Home'
 import { Portfolio } from './Pages/Portfolio'
 import { ContactPage } from './Pages/Contact'
-import { BlogScroll } from './Pages/Blog'
+import { BlogPost, BlogScroll } from './Pages/Blog'
 import { Dashboard } from './Pages/Dashboard'
 import { Logout } from './Pages/Logout'
 import { AuthProvider } from './Contexts/UserContext';
@@ -20,6 +20,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog" element={<BlogScroll />} />
+          <Route path='/blog/post/:postId' element={<BlogPost />} />
           <Route path="/comingsoon" element={<ComingSoon />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/logout" element={<Logout />} />

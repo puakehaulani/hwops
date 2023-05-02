@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 
-import { CardGridListItem } from '../CardGrid'
+import { CardGridListItem } from '../../Components/CardGrid'
 import './style.css'
 
 export const Skills = () => {
