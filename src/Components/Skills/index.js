@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 
-import { CardGridListItem } from '../CardGrid'
+import { CardGridItem } from '../../Components/CardGrid'
 import './style.css'
 
 export const Skills = () => {
@@ -31,7 +31,7 @@ export const Skills = () => {
             <Container className="section-container">
                 {/* TODO: Customize Client Content */}
                 <h1 className="text-center">Our Skills</h1>
-                <CardGridListItem data={skillsObject} />
+                <CardGridItem data={skillsObject} />
             </Container>
         </>
     )
