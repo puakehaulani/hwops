@@ -4,6 +4,7 @@ import { ComingSoon } from './Pages/ComingSoon'
 import { Home } from './Pages/Home'
 import { Portfolio } from './Pages/Portfolio'
 import { FAQ } from './Pages/FAQ'
+import { Media } from './Pages/Media'
 import { ContactPage } from './Pages/Contact'
 import { BlogPost, BlogScroll } from './Pages/Blog'
 import { Dashboard } from './Pages/Dashboard'
@@ -19,6 +20,7 @@ function App() {
 
           <Route exact path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/media" element={<Media />} />
           <Route path="/faq" element={<FAQ />} />
           {/* <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog" element={<BlogScroll />} />

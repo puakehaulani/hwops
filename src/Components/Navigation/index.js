@@ -43,6 +43,7 @@ export const Navigation = () => {
                     {/* TODO: Customize Client Links */}
                     <Nav.Link href="/#about">About</Nav.Link>
                     <Nav.Link href="/faq">FAQ</Nav.Link>
+                    <Nav.Link href="/media">Media</Nav.Link>
                     <Nav.Link href="/#contact">Contact</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
