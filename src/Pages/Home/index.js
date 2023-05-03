@@ -1,5 +1,5 @@
 import { Navigation } from '../../Components'
-import { Hero, ContactCTA, About, Services, Team, Footer } from '../../Sections'
+import { Hero, About, Services, Team, Footer, Contact } from '../../Sections'
 import './style.css'
 
 export const Home = () => {
@@ -16,10 +16,7 @@ export const Home = () => {
             <Navigation />
             <Hero data={heroObject} />
             <About />
-            <Services />
-            <div className="text-center"><ContactCTA /></div>
-            <Team />
-            <div className="text-center"><ContactCTA /></div>
+            <Contact />
             <Footer />
         </div>
     )

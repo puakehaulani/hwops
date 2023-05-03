@@ -24,7 +24,7 @@ export const NotFound = () => {
                     <Col className="text-center">
                         <Link to="/">
                             {/* TODO: Update variant to match client branding */}
-                            <Button variant="dark">Return</Button>
+                            <Button variant="danger">Return</Button>
                         </Link>
                     </Col>
                 </Row >

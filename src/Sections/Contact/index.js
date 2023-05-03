@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row"
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
-import { FaLinkedin, FaInstagramSquare } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 
 import { FormSubmitAPIForm } from '../../Components/Form'
 import './style.css'
@@ -13,10 +13,10 @@ export const ContactCTA = () => {
     return (
         // TODO: Customize Client Content
         <div className="contactCTA">
-            Contact us for a consultation! <br />
+            Come paddle with us!<br />
             <Link to="/contact">
                 {/* TODO: Customize Button variant */}
-                <Button variant="dark">Connect</Button>
+                <Button variant="danger">Join</Button>
             </Link>
         </div>
 
@@ -30,7 +30,7 @@ export const CustomContactCTA = (props) => {
             {props.data.text} <br />
             <Link to="/contact">
                 {/* TODO: Customize Button variant */}
-                <Button variant="dark">{props.data.button}</Button>
+                <Button variant="danger">{props.data.button}</Button>
             </Link>
         </div>
 
@@ -47,8 +47,8 @@ export const ContactSocialIcons = () => {
                 TODO: update color on icons
             */}
             <h1 >
-                <a style={{ color: "#B2A2B9" }} href="https://www.linkedin.com/in/lexijack/" target="_blank" rel='noreferrer'><FaLinkedin /></a>
-                <a style={{ color: "#B2A2B9" }} href="https://www.instagram.com/puakehaulani/" target="_blank" rel='noreferrer'><FaInstagramSquare /></a>
+                <a style={{ color: "#ea3a51" }} href="https://www.facebook.com/groups/HWOPS" target="_blank" rel='noreferrer'><FaFacebookSquare /></a>
+
             </h1>
         </>
     )
@@ -62,9 +62,9 @@ export const Contact = () => {
             <Container className="section-container">
                 <Row xs={1} sm={2} style={{ display: "flex", justifyContent: "center", alignItems: 'center' }}>
                     <Col sm={4} className="text-center">
-                        <h1 >Contact Us</h1>
+                        <h1 >Come Paddle With Us</h1>
                         <Container style={{ paddingBottom: "30px" }}>
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br />
+                            For more information about Hui Wa'a o Puget Sound, send us a message and we will respond as soon as possible. Mahalo!<br />
                             {ContactSocialIcons()}
                         </Container>
                     </Col>
