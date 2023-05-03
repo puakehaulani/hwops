@@ -5,13 +5,12 @@ import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom';
-
-import Navigation from "../../Components/Navigation"
+import { Navigation } from "../../Components"
 // TODO: update linkpath if needed
 import img from '../../assets/images/404.jpg'
 import './style.css'
 
-function NotFound() {
+export const NotFound = () => {
     return (
         <div className="pageView">
             <Navigation />
@@ -33,5 +32,3 @@ function NotFound() {
         </div>
     )
 }
-
-export default NotFound

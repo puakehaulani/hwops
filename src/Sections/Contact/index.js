@@ -6,10 +6,10 @@ import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
 import { FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 
-import { FormSubmitAPIForm } from '../Form'
+import { FormSubmitAPIForm } from '../../Components/Form'
 import './style.css'
 
-function ContactCTA() {
+export const ContactCTA = () => {
     return (
         // TODO: Customize Client Content
         <div className="contactCTA">
@@ -23,7 +23,22 @@ function ContactCTA() {
     )
 }
 
-function ContactSocialIcons() {
+export const CustomContactCTA = (props) => {
+    return (
+        // TODO: Customize Client Content
+        <div className="contactCTA">
+            {props.data.text} <br />
+            <Link to="/contact">
+                {/* TODO: Customize Button variant */}
+                <Button variant="dark">{props.data.button}</Button>
+            </Link>
+        </div>
+
+    )
+}
+
+
+export const ContactSocialIcons = () => {
     return (
         <>
             {/* 
@@ -39,11 +54,11 @@ function ContactSocialIcons() {
     )
 }
 
-function Contact() {
+export const Contact = () => {
     // TODO: Customize Client Content
     return (
         <>
-            <span class="anchor" id="contact" />
+            <span className="anchor" id="contact" />
             <Container className="section-container">
                 <Row xs={1} sm={2} style={{ display: "flex", justifyContent: "center", alignItems: 'center' }}>
                     <Col sm={4} className="text-center">
@@ -64,5 +79,3 @@ function Contact() {
 
 
 
-export default Contact
-export { ContactCTA, ContactSocialIcons }

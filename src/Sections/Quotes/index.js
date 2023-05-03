@@ -1,9 +1,9 @@
 import Container from 'react-bootstrap/Container'
 
-import CarouselComponent from "../Carousel";
+import { CarouselComponent } from "../Carousel";
 import './style.css'
 
-function Quotes() {
+export const Quotes = () => {
     // TODO: Customize Client Object
     const quoteObject = [
         {
@@ -37,5 +37,3 @@ function Quotes() {
         </>
     )
 }
-
-export default Quotes

@@ -1,11 +1,8 @@
-import Navigation from '../../Components/Navigation'
-import Banner from '../../Components/Banner'
-import Contact from '../../Components/Contact'
-import Footer from '../../Components/Footer'
-
+import { Navigation } from '../../Components'
+import { Banner, Contact, Footer } from '../../Sections'
 import './style.css'
 
-function ContactPage() {
+export const ContactPage = () => {
     // TODO: Customize Client Object
     const bannerObject = {
         header: "HEADER FOR CONTACT",
@@ -22,5 +19,3 @@ function ContactPage() {
         </div>
     )
 }
-
-export default ContactPage

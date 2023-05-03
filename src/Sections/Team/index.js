@@ -1,11 +1,11 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import CardGrid from '../CardGrid'
-import { TwoColTextRight } from '../TwoCol'
+import { CardGrid } from '../../Components/CardGrid'
+import { TwoColTextRight } from '../../Components/TwoCol'
 import './style.css'
 
-function Team() {
+export const Team = () => {
     // TODO: Customize Client Object
     const teamObject = [
         {
@@ -48,7 +48,7 @@ function Team() {
 
     return (
         <>
-            <span class="anchor" id="team" />
+            <span className="anchor" id="team" />
             <Container className="section-container">
                 {/* TODO: Customize Client Content */}
                 {founderContent}
@@ -57,5 +57,3 @@ function Team() {
         </>
     )
 }
-
-export default Team

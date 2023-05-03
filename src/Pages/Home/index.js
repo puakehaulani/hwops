@@ -1,14 +1,8 @@
-import Navigation from '../../Components/Navigation'
-import Hero from '../../Components/Hero'
-import { ContactCTA } from '../../Components/Contact'
-import About from '../../Components/About'
-import Services from '../../Components/Services'
-import Team from '../../Components/Team'
-import Footer from '../../Components/Footer'
-
+import { Navigation } from '../../Components'
+import { Hero, ContactCTA, About, Services, Team, Footer } from '../../Sections'
 import './style.css'
 
-function Landing() {
+export const Home = () => {
     // TODO: Customize Client Object
     const heroObject =
     {
@@ -31,4 +25,3 @@ function Landing() {
     )
 }
 
-export default Landing
