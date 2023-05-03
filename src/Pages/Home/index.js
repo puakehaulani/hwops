@@ -7,8 +7,8 @@ export const Home = () => {
     const heroObject =
     {
         image: "./images/logo.png",
-        tagline: "This is the Hero Tagline",
-        cta: true
+        tagline: "",
+        // cta: true
     }
 
     return (

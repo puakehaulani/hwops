@@ -62,10 +62,12 @@ export const Contact = () => {
             <Container className="section-container">
                 <Row xs={1} sm={2} style={{ display: "flex", justifyContent: "center", alignItems: 'center' }}>
                     <Col sm={4} className="text-center">
-                        <h1 >Come Paddle With Us</h1>
+                        <h1 >Join Us</h1>
                         <Container style={{ paddingBottom: "30px" }}>
                             For more information about Hui Wa'a o Puget Sound, send us a message and we will respond as soon as possible. Mahalo!<br />
                             {ContactSocialIcons()}
+                            7515 NE 175th St
+                            Kenmore, WA 98028
                         </Container>
                     </Col>
                     <Col sm={8} className="formCol">
