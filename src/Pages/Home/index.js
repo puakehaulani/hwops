@@ -1,5 +1,5 @@
 import { Navigation } from '../../Components'
-import { Hero, ContactCTA, About, Services, Team, Footer } from '../../Sections'
+import { Hero, About, Services, Team, Footer, Contact, CarouselComponent } from '../../Sections'
 import './style.css'
 
 export const Home = () => {
@@ -7,19 +7,18 @@ export const Home = () => {
     const heroObject =
     {
         image: "./images/logo.png",
-        tagline: "This is the Hero Tagline",
-        cta: true
+        tagline: "",
+        // cta: true
     }
+
 
     return (
         <div className="pageView">
             <Navigation />
             <Hero data={heroObject} />
             <About />
-            <Services />
-            <div className="text-center"><ContactCTA /></div>
-            <Team />
-            <div className="text-center"><ContactCTA /></div>
+            {/* <div className={'text-center'}><h3 style={{ backgroundColor: 'white', padding: 10, margin: 20, color: 'red' }}>(HOLD FOR SOCIAL EMBED)</h3></div> */}
+            <Contact />
             <Footer />
         </div>
     )

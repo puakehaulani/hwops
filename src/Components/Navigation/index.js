@@ -24,28 +24,27 @@ export const Navigation = () => {
     return (
         <Navbar
             collapseOnSelect={true}
-            className={` ${transparentBg ? "navBackgroundTransparent" : "navBackgroundColor"}`}
+            // className={` ${transparentBg ? "navBackgroundTransparent" : "navBackgroundColor"}`}
+            className={'navBackgroundColor'}
             variant="light"
             expand="md"
             sticky="top"
         >
             <Navbar.Brand href="/">
-                {transparentBg ?
+                {/* {transparentBg ?
                     <></>
-                    :
-                    <Image src="../images/logo.png" height={50} />
-                }
+                    : */}
+                <Image src="../images/logo.png" height={50} />
+                {/* } */}
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                 <Nav>
                     {/* TODO: Customize Client Links */}
                     <Nav.Link href="/#about">About</Nav.Link>
-                    <Nav.Link href="/#services">Services</Nav.Link>
-                    <Nav.Link href="/#team">Team</Nav.Link>
-                    <Nav.Link href="/portfolio">Portfolio</Nav.Link>
-                    <Nav.Link href="/blog">Blog</Nav.Link>
-                    <Nav.Link href="/contact">Contact</Nav.Link>
+                    <Nav.Link href="/faq">FAQ</Nav.Link>
+                    <Nav.Link href="/media">Media</Nav.Link>
+                    <Nav.Link href="/#contact">Contact</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

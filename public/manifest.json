@@ -1,8 +1,8 @@
 {
-  "short_name": "Company Name",
-  "name": "Company Name Website",
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+	"short_name": "HWOPS",
+	"name": "Hui Waa o Puget Sound",
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff"
 }
