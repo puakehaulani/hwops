@@ -14,12 +14,12 @@ export const FAQ = () => {
         },
         {
             question: 'How do I pay dues?',
-            answer: [{ 'description': '2023 Dues comprised of two payments: one to KWAC and one to HWOPS Canoe Club' }, { 'description': 'See fee structure on Membership form for payment amounts' }, { 'description': 'HWOPS club dues electronically via Venmo', 'link': 'https://account.venmo.com/u/HuiWaa-PugetSound', 'linktext': 'Click here' }, { 'description': 'KWAC Outrigger Membership Fee electronically via paypal', 'link': 'https://www.kenmorewac.org/kwac-membership/', 'linktext': 'Click here' }]
+            answer: [{ 'description': '2023 Dues comprised of two payments: one to KWAC and one to HWOPS Canoe Club' }, { 'description': 'See fee structure on Membership form for payment amounts', 'link': 'https://hwopscanoeclub.teamcowboy.com/file/2023%2520Club%2520Registration%2520Form.pdf/23138', 'linktext': 'Membership form' }, { 'description': 'HWOPS club dues electronically via Venmo', 'link': 'https://account.venmo.com/u/HuiWaa-PugetSound', 'linktext': 'Venmo' }, { 'description': 'KWAC Outrigger Membership Fee electronically via paypal', 'link': 'https://www.kenmorewac.org/kwac-membership/', 'linktext': 'Paypal' }]
 
         },
         {
             question: 'Where can I obtain the membership form?',
-            answer: [{ 'description': 'Membership form on TeamCowboy', 'link': 'https://www.teamcowboy.com/.../2023%2520Club.../23138', 'linktext': 'Click here' },],
+            answer: [{ 'description': 'Membership form on TeamCowboy', 'link': 'https://hwopscanoeclub.teamcowboy.com/media/files', 'linktext': 'Click here' },],
         },
         {
             question: 'Where do I send the completed registration form?',
