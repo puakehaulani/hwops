@@ -22,7 +22,7 @@ export const FAQ = () => {
         },
         {
             question: 'Where do I send the completed registration form?',
-            answer: ['Email forms to to HWOPS.contact@gmail.com'],
+            answer: ['Email forms to HWOPS.contact@gmail.com'],
 
         },
         {
