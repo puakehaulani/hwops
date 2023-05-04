@@ -13,7 +13,7 @@ export const Hero = (props) => {
             <Container>
                 <Row >
                     <div className="logoOverlay">
-                        <Image src={props.data.image} />
+                        <Image src={props.data.image} fluid={true} />
                     </div>
                 </Row>
                 <Row>
