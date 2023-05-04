@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Amplify from 'aws-amplify';
+// import Amplify from 'aws-amplify';
 // import config from './aws-exports';
 
 // check if env is localhost or not
