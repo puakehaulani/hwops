@@ -4,7 +4,7 @@
 }
 /* TODO: Customize background color to match client branding */
 .navBackgroundColor {
-	background-color: #f7b56a;
+	background-color: #ffe89d;
 	padding: 8;
 }
 
@@ -15,5 +15,5 @@
 /* TODO: Customize background color to match client branding */
 .show,
 .collapsing {
-	background-color: #f7b56a;
+	background-color: #ffe89d;
 }

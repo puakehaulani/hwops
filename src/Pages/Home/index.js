@@ -17,7 +17,7 @@ export const Home = () => {
             <Navigation />
             <Hero data={heroObject} />
             <About />
-            <div className={'text-center'}><h3 style={{ backgroundColor: 'white', padding: 10, margin: 20, color: 'red' }}>(HOLD FOR SOCIAL EMBED)</h3></div>
+            {/* <div className={'text-center'}><h3 style={{ backgroundColor: 'white', padding: 10, margin: 20, color: 'red' }}>(HOLD FOR SOCIAL EMBED)</h3></div> */}
             <Contact />
             <Footer />
         </div>

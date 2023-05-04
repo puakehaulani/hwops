@@ -20,6 +20,8 @@ export const Media = () => {
         './media/img-5.jpeg',
         './media/img-6.jpeg',
         './media/img-7.jpeg',
+        './media/img-8.jpeg',
+        './media/img-9.jpeg'
     ]
 
     const RenderMedia = (props) => {

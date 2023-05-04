@@ -9,7 +9,7 @@ h4 {
 }
 
 .pageView {
-	background-color: #e4c99f;
+	background-color: #fff4ce;
 	font-family: 'Nunito', san-serif;
 	color: black;
 }
@@ -24,7 +24,7 @@ h4 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	filter: drop-shadow(5px 5px 15px #f7b56a);
+	filter: drop-shadow(5px 5px 15px #f8b117);
 }
 
 .section-container {
