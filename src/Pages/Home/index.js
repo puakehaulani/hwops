@@ -8,7 +8,6 @@ export const Home = () => {
     {
         image: "./images/logo.png",
         tagline: "",
-        // cta: true
     }
 
 

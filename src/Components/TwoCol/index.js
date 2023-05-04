@@ -6,7 +6,6 @@ import Image from 'react-bootstrap/Image'
 
 export const TwoColTextRight = (props) => {
     const RenderBody = () => props.data.text.map((item) => {
-        console.log('it4em', item);
         return <p>{item}</p>
     })
     console.log('testing: ', RenderBody())
@@ -38,7 +37,6 @@ export const TwoColTextLeft = (props) => {
                 <h2 className="text-center">{props.data.subtitle}</h2>
                 <h3 className="text-center">{props.data.minititle}</h3>
                 <RenderBody />
-                {/* {props.data.text} */}
             </Col>
             <Col className="image-container">
                 <Image src={props.data.image} height={400} width={400} rounded fluid />
