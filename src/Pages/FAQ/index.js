@@ -1,5 +1,5 @@
 import { Navigation } from '../../Components'
-import { Hero, About, Services, Team, Footer, Contact } from '../../Sections'
+import { Footer, Contact } from '../../Sections'
 import { Container, Accordion, Row } from 'react-bootstrap'
 import './style.css'
 
@@ -57,7 +57,7 @@ export const FAQ = () => {
             const formattedAnswers = i?.answer?.map((i) => {
                 const formattedLink = (i) => {
                     return (
-                        <a href={i.link} target='_blank'>
+                        <a href={i.link} target='_blank' rel="noreferrer" >
                             {i.linktext}
                         </a>
                     )
@@ -83,7 +83,8 @@ export const FAQ = () => {
         }
         const rendered = props.data.map((i) => {
             return (
-                <Accordion defaultActiveKey={['0']} alwaysOpen>{renderItem(i)}
+                <Accordion defaultActiveKey={['0']}>
+                    {renderItem(i)}
                 </Accordion>
             )
         })
@@ -93,7 +94,6 @@ export const FAQ = () => {
     return (
         <div className="pageView">
             <Navigation />
-            {/* <Hero data={heroObject} /> */}
             <Container>
                 <h1>FAQs</h1>
                 <RenderFAQs data={faqList} />
