@@ -9,7 +9,7 @@ export const FormSubmitAPIForm = () => {
     return (
         <Container className="contactForm">
 
-            < Form action="https://formsubmit.co/HWOPS.contact@gmail.com@gmail.com" method="POST" >
+            < Form action="https://formsubmit.co/HWOPS.contact@gmail.com" method="POST" >
 
                 < input type="hidden" name="_next" value="http://hwops.org/" />
                 <input type="hidden" name="_template" value="box" />
